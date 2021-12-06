@@ -119,26 +119,26 @@ func timeToString(hour: Int, minute: Int, second: Int, hasSeconds: Bool) -> Stri
     var stringTime = ""
     if (hasSeconds) {
         if (hour < 12) {
-            stringTime = "\(hour):\(String(format: "%02d", minute)):\(String(format: "%02d", second)) AM"
+            stringTime = "\(hour):\(String(format: "%02d", minute)):\(String(format: "%02d", second))AM"
         }
         else if (hour == 12) {
-            stringTime = "\(hour):\(String(format: "%02d", minute)):\(String(format: "%02d", second)) PM"
+            stringTime = "\(hour):\(String(format: "%02d", minute)):\(String(format: "%02d", second))PM"
         }
         else
         {
-            stringTime = "\(hour - 12):\(String(format: "%02d", minute)):\(String(format: "%02d", second)) PM"
+            stringTime = "\(hour - 12):\(String(format: "%02d", minute)):\(String(format: "%02d", second))PM"
         }
     }
     else {
         if (hour < 12) {
-            stringTime = "\(hour):\(String(format: "%02d", minute)) AM"
+            stringTime = "\(hour):\(String(format: "%02d", minute))AM"
         }
         else if (hour == 12) {
-            stringTime = "\(hour):\(String(format: "%02d", minute)) PM"
+            stringTime = "\(hour):\(String(format: "%02d", minute))PM"
         }
         else
         {
-            stringTime = "\(hour - 12):\(String(format: "%02d", minute)) PM"
+            stringTime = "\(hour - 12):\(String(format: "%02d", minute))PM"
         }
     }
     

@@ -1,0 +1,678 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F3A54262750413E00781A91 /* BayclockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A54252750413E00781A91 /* BayclockApp.swift */; };
+		9F3A54282750413E00781A91 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A54272750413E00781A91 /* ContentView.swift */; };
+		9F3A542A2750414000781A91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F3A54292750414000781A91 /* Assets.xcassets */; };
+		9F3A542D2750414000781A91 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F3A542C2750414000781A91 /* Preview Assets.xcassets */; };
+		9F3A54372750414000781A91 /* BayclockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A54362750414000781A91 /* BayclockTests.swift */; };
+		9F3A54412750414000781A91 /* BayclockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A54402750414000781A91 /* BayclockUITests.swift */; };
+		9F3A54432750414000781A91 /* BayclockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A54422750414000781A91 /* BayclockUITestsLaunchTests.swift */; };
+		9F3AB934275DBCD5000CC8F8 /* DeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AB933275DBCD5000CC8F8 /* DeveloperView.swift */; };
+		9FB82A91275045B800720CA4 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82A90275045B800720CA4 /* ModelData.swift */; };
+		9FB82A9327504E4000720CA4 /* schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FB82A9227504E4000720CA4 /* schedule.json */; };
+		9FB82A962750518E00720CA4 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82A952750518E00720CA4 /* Day.swift */; };
+		9FB82A98275054F700720CA4 /* BlockRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82A97275054F700720CA4 /* BlockRow.swift */; };
+		9FB82A9A2750553E00720CA4 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82A992750553E00720CA4 /* Block.swift */; };
+		9FB82A9E27509C0400720CA4 /* BlockList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82A9D27509C0400720CA4 /* BlockList.swift */; };
+		9FB82AA62751A43200720CA4 /* GetTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82AA52751A43200720CA4 /* GetTime.swift */; };
+		9FB82AAB2752B5EE00720CA4 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82AAA2752B5EE00720CA4 /* MenuView.swift */; };
+		9FB82AAD2752B83E00720CA4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82AAC2752B83E00720CA4 /* SettingsView.swift */; };
+		9FF07535275D3D6C0070FA70 /* TestBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF07534275D3D6B0070FA70 /* TestBar.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F3A54332750414000781A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F3A541A2750413E00781A91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F3A54212750413E00781A91;
+			remoteInfo = Bayclock;
+		};
+		9F3A543D2750414000781A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F3A541A2750413E00781A91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F3A54212750413E00781A91;
+			remoteInfo = Bayclock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F3A54222750413E00781A91 /* Bayclock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bayclock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F3A54252750413E00781A91 /* BayclockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayclockApp.swift; sourceTree = "<group>"; };
+		9F3A54272750413E00781A91 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9F3A54292750414000781A91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F3A542C2750414000781A91 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9F3A54322750414000781A91 /* BayclockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BayclockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F3A54362750414000781A91 /* BayclockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayclockTests.swift; sourceTree = "<group>"; };
+		9F3A543C2750414000781A91 /* BayclockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BayclockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F3A54402750414000781A91 /* BayclockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayclockUITests.swift; sourceTree = "<group>"; };
+		9F3A54422750414000781A91 /* BayclockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayclockUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9F3AB933275DBCD5000CC8F8 /* DeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperView.swift; sourceTree = "<group>"; };
+		9FB82A90275045B800720CA4 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		9FB82A9227504E4000720CA4 /* schedule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schedule.json; sourceTree = "<group>"; };
+		9FB82A952750518E00720CA4 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		9FB82A97275054F700720CA4 /* BlockRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockRow.swift; sourceTree = "<group>"; };
+		9FB82A992750553E00720CA4 /* Block.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		9FB82A9D27509C0400720CA4 /* BlockList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockList.swift; sourceTree = "<group>"; };
+		9FB82AA52751A43200720CA4 /* GetTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTime.swift; sourceTree = "<group>"; };
+		9FB82AAA2752B5EE00720CA4 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		9FB82AAC2752B83E00720CA4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9FF07534275D3D6B0070FA70 /* TestBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBar.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F3A541F2750413E00781A91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F3A542F2750414000781A91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F3A54392750414000781A91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F3A54192750413E00781A91 = {
+			isa = PBXGroup;
+			children = (
+				9F3A54242750413E00781A91 /* Bayclock */,
+				9F3A54352750414000781A91 /* BayclockTests */,
+				9F3A543F2750414000781A91 /* BayclockUITests */,
+				9F3A54232750413E00781A91 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F3A54232750413E00781A91 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F3A54222750413E00781A91 /* Bayclock.app */,
+				9F3A54322750414000781A91 /* BayclockTests.xctest */,
+				9F3A543C2750414000781A91 /* BayclockUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F3A54242750413E00781A91 /* Bayclock */ = {
+			isa = PBXGroup;
+			children = (
+				9F3A54252750413E00781A91 /* BayclockApp.swift */,
+				9FB82A8F275044F400720CA4 /* Views */,
+				9FB82A8E275044E700720CA4 /* Resources */,
+				9FB82A8D275044D800720CA4 /* Model */,
+				9F3A54292750414000781A91 /* Assets.xcassets */,
+				9F3A542B2750414000781A91 /* Preview Content */,
+			);
+			path = Bayclock;
+			sourceTree = "<group>";
+		};
+		9F3A542B2750414000781A91 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9F3A542C2750414000781A91 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9F3A54352750414000781A91 /* BayclockTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F3A54362750414000781A91 /* BayclockTests.swift */,
+			);
+			path = BayclockTests;
+			sourceTree = "<group>";
+		};
+		9F3A543F2750414000781A91 /* BayclockUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9F3A54402750414000781A91 /* BayclockUITests.swift */,
+				9F3A54422750414000781A91 /* BayclockUITestsLaunchTests.swift */,
+			);
+			path = BayclockUITests;
+			sourceTree = "<group>";
+		};
+		9FB82A8D275044D800720CA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FB82A90275045B800720CA4 /* ModelData.swift */,
+				9FB82A952750518E00720CA4 /* Day.swift */,
+				9FB82A992750553E00720CA4 /* Block.swift */,
+				9FB82AA52751A43200720CA4 /* GetTime.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9FB82A8E275044E700720CA4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9FB82A9227504E4000720CA4 /* schedule.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9FB82A8F275044F400720CA4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9F3A54272750413E00781A91 /* ContentView.swift */,
+				9FB82A9D27509C0400720CA4 /* BlockList.swift */,
+				9FB82A97275054F700720CA4 /* BlockRow.swift */,
+				9FB82AAA2752B5EE00720CA4 /* MenuView.swift */,
+				9FB82AAC2752B83E00720CA4 /* SettingsView.swift */,
+				9FF07534275D3D6B0070FA70 /* TestBar.swift */,
+				9F3AB933275DBCD5000CC8F8 /* DeveloperView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F3A54212750413E00781A91 /* Bayclock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F3A54462750414000781A91 /* Build configuration list for PBXNativeTarget "Bayclock" */;
+			buildPhases = (
+				9F3A541E2750413E00781A91 /* Sources */,
+				9F3A541F2750413E00781A91 /* Frameworks */,
+				9F3A54202750413E00781A91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bayclock;
+			productName = Bayclock;
+			productReference = 9F3A54222750413E00781A91 /* Bayclock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F3A54312750414000781A91 /* BayclockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F3A54492750414000781A91 /* Build configuration list for PBXNativeTarget "BayclockTests" */;
+			buildPhases = (
+				9F3A542E2750414000781A91 /* Sources */,
+				9F3A542F2750414000781A91 /* Frameworks */,
+				9F3A54302750414000781A91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F3A54342750414000781A91 /* PBXTargetDependency */,
+			);
+			name = BayclockTests;
+			productName = BayclockTests;
+			productReference = 9F3A54322750414000781A91 /* BayclockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9F3A543B2750414000781A91 /* BayclockUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F3A544C2750414000781A91 /* Build configuration list for PBXNativeTarget "BayclockUITests" */;
+			buildPhases = (
+				9F3A54382750414000781A91 /* Sources */,
+				9F3A54392750414000781A91 /* Frameworks */,
+				9F3A543A2750414000781A91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F3A543E2750414000781A91 /* PBXTargetDependency */,
+			);
+			name = BayclockUITests;
+			productName = BayclockUITests;
+			productReference = 9F3A543C2750414000781A91 /* BayclockUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F3A541A2750413E00781A91 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					9F3A54212750413E00781A91 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					9F3A54312750414000781A91 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 9F3A54212750413E00781A91;
+					};
+					9F3A543B2750414000781A91 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 9F3A54212750413E00781A91;
+					};
+				};
+			};
+			buildConfigurationList = 9F3A541D2750413E00781A91 /* Build configuration list for PBXProject "Bayclock" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F3A54192750413E00781A91;
+			productRefGroup = 9F3A54232750413E00781A91 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F3A54212750413E00781A91 /* Bayclock */,
+				9F3A54312750414000781A91 /* BayclockTests */,
+				9F3A543B2750414000781A91 /* BayclockUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F3A54202750413E00781A91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F3A542D2750414000781A91 /* Preview Assets.xcassets in Resources */,
+				9FB82A9327504E4000720CA4 /* schedule.json in Resources */,
+				9F3A542A2750414000781A91 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F3A54302750414000781A91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F3A543A2750414000781A91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F3A541E2750413E00781A91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FB82AA62751A43200720CA4 /* GetTime.swift in Sources */,
+				9FB82A91275045B800720CA4 /* ModelData.swift in Sources */,
+				9FB82A9E27509C0400720CA4 /* BlockList.swift in Sources */,
+				9F3AB934275DBCD5000CC8F8 /* DeveloperView.swift in Sources */,
+				9F3A54282750413E00781A91 /* ContentView.swift in Sources */,
+				9FB82AAB2752B5EE00720CA4 /* MenuView.swift in Sources */,
+				9FB82AAD2752B83E00720CA4 /* SettingsView.swift in Sources */,
+				9FB82A962750518E00720CA4 /* Day.swift in Sources */,
+				9FB82A9A2750553E00720CA4 /* Block.swift in Sources */,
+				9FB82A98275054F700720CA4 /* BlockRow.swift in Sources */,
+				9F3A54262750413E00781A91 /* BayclockApp.swift in Sources */,
+				9FF07535275D3D6C0070FA70 /* TestBar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F3A542E2750414000781A91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F3A54372750414000781A91 /* BayclockTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F3A54382750414000781A91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F3A54432750414000781A91 /* BayclockUITestsLaunchTests.swift in Sources */,
+				9F3A54412750414000781A91 /* BayclockUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F3A54342750414000781A91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F3A54212750413E00781A91 /* Bayclock */;
+			targetProxy = 9F3A54332750414000781A91 /* PBXContainerItemProxy */;
+		};
+		9F3A543E2750414000781A91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F3A54212750413E00781A91 /* Bayclock */;
+			targetProxy = 9F3A543D2750414000781A91 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9F3A54442750414000781A91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9F3A54452750414000781A91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F3A54472750414000781A91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Bayclock/Preview Content\"";
+				DEVELOPMENT_TEAM = W6DDL5ZU4F;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Sean-Inc..Bayclock";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F3A54482750414000781A91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Bayclock/Preview Content\"";
+				DEVELOPMENT_TEAM = W6DDL5ZU4F;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Sean-Inc..Bayclock";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9F3A544A2750414000781A91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W6DDL5ZU4F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Sean-Inc..BayclockTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bayclock.app/Bayclock";
+			};
+			name = Debug;
+		};
+		9F3A544B2750414000781A91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W6DDL5ZU4F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Sean-Inc..BayclockTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bayclock.app/Bayclock";
+			};
+			name = Release;
+		};
+		9F3A544D2750414000781A91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W6DDL5ZU4F;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Sean-Inc..BayclockUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bayclock;
+			};
+			name = Debug;
+		};
+		9F3A544E2750414000781A91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W6DDL5ZU4F;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Sean-Inc..BayclockUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bayclock;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F3A541D2750413E00781A91 /* Build configuration list for PBXProject "Bayclock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F3A54442750414000781A91 /* Debug */,
+				9F3A54452750414000781A91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F3A54462750414000781A91 /* Build configuration list for PBXNativeTarget "Bayclock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F3A54472750414000781A91 /* Debug */,
+				9F3A54482750414000781A91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F3A54492750414000781A91 /* Build configuration list for PBXNativeTarget "BayclockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F3A544A2750414000781A91 /* Debug */,
+				9F3A544B2750414000781A91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F3A544C2750414000781A91 /* Build configuration list for PBXNativeTarget "BayclockUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F3A544D2750414000781A91 /* Debug */,
+				9F3A544E2750414000781A91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F3A541A2750413E00781A91 /* Project object */;
+}

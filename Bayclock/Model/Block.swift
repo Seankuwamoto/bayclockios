@@ -34,8 +34,8 @@ struct Block: Hashable, Codable {
         else {
             return returnValue
         }
-        
     }
+    
 }
 
 // Turns a UIColor into data that is storable in UserDefaults.
@@ -119,3 +119,19 @@ func getClass(schedule: [Day], time: TimeStruct) -> String {
     }
     return returnValue
 }
+
+func timeLeft(schedule: [Day], time: TimeStruct) -> String {
+    let currentSchedule = schedule[time.weekday - 2].blocks
+    let numBlocks = currentSchedule.count
+    let currentTime = timeToSeconds(hour: time.hour, minute: time.minute, second: time.second)
+    var returnValue = ""
+
+    // loops through all of the blocks in the array
+    for index in 0...(numBlocks - 1) {
+        if (currentTime > timeToSeconds(hour: currentSchedule[index].start.hour, minute: currentSchedule[index].start.minute, second: 0) && currentTime < timeToSeconds(hour: currentSchedule[index].end.hour, minute: currentSchedule[index].end.minute, second: 0)) {
+            returnValue = "Time left: \((timeToSeconds(hour: currentSchedule[index].end.hour, minute: currentSchedule[index].end.minute, second: 0) - currentTime)/60 + 1) Minutes"
+        }
+    }
+    return returnValue
+}
+

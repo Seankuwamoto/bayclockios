@@ -35,6 +35,7 @@ struct BlockList: View {
                             .padding(.bottom, 50.0)
                     }
                     Text(getClass(schedule: modelData.schedule, time: time))
+                    Text(timeLeft(schedule: modelData.schedule, time: time))
                     ForEach(modelData.schedule[time.weekday - 2].blocks, id: \.self) { Block in
                         BlockRow(block: Block, time: time)
                             .padding(.top, barSpacing)

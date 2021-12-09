@@ -27,7 +27,7 @@ struct BlockRow: View {
                     .saturation(1.2)
                 VStack {
                     HStack() {
-                        Text(block.name)
+                        Text(getName(name: block.name))
                             .font(.headline)
                             .padding(.leading, 50.0)
                             .foregroundColor(.black)

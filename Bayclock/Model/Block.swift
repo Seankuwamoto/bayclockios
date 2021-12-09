@@ -44,7 +44,29 @@ struct Block: Hashable, Codable {
 }
 
 func getName(name: String) -> String {
-    return("E")
+    let blockNames: [String: String] = [
+        "Morning Meeting": "Morning Meeting",
+        "Group Advisory/1-on-1s": "Group Advisory/1-on-1s",
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D",
+        "E": "E",
+        "F": "F",
+        "Lunch": "Lunch",
+        "Tutorial": "Tutorial"
+    ]
+    
+    if (UserDefaults.standard.dictionary(forKey: "blockNames") == nil) {
+        UserDefaults.standard.set(blockNames, forKey: "blockNames")
+    }
+    if (UserDefaults.standard.dictionary(forKey: "blockNames")![name] as! String == "") {
+        return blockNames[name]!
+    }
+    else {
+        return UserDefaults.standard.dictionary(forKey: "blockNames")![name] as! String
+    }
+    
 }
 
 // Turns a UIColor into data that is storable in UserDefaults.

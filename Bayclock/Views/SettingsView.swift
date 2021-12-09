@@ -37,19 +37,20 @@ struct SettingsView: View {
         VStack {
             HStack {
                 Spacer()
+                Text("Settings")
+                    .padding(.leading, 40)
+                Spacer()
                 // Save button.
                 Button(action: {
                     saveSettings()
                 }) {
-                    ZStack {
-                        Text("Save")
-                            .foregroundColor(.blue)
-                    }
+                    Text("Save")
+                        .foregroundColor(.blue)
                 }
                 .padding(.trailing, 10)
 
             }
-            Text("Settings")
+            .padding(.top, 10)
             List {
                 // Toggles for compressed mode and hide completed.
                 Toggle(isOn: $compressedMode) {
@@ -60,19 +61,46 @@ struct SettingsView: View {
                 }
                 // Color pickers for each of the class colors.
                 Group {
-                    ColorPicker(TextField(
-                        "\(MMName)",
-                        text: $MMName
-                    ), selection: $MMColor, supportsOpacity: false)
-                    ColorPicker("Group Advisory/1-on-1s", selection: $GAColor, supportsOpacity: false)
-                    ColorPicker("A", selection: $AColor, supportsOpacity: false)
-                    ColorPicker("B", selection: $BColor, supportsOpacity: false)
-                    ColorPicker("C", selection: $CColor, supportsOpacity: false)
-                    ColorPicker("D", selection: $DColor, supportsOpacity: false)
-                    ColorPicker("E", selection: $EColor, supportsOpacity: false)
-                    ColorPicker("F", selection: $FColor, supportsOpacity: false)
-                    ColorPicker("Lunch", selection: $LunchColor, supportsOpacity: false)
-                    ColorPicker("Tutorial", selection: $TutorialColor, supportsOpacity: false)
+                    HStack {
+                        TextField("Morning Meeting",text: $MMName)
+                        ColorPicker("", selection: $MMColor, supportsOpacity: false)
+                    }
+                    HStack {
+                        TextField("Group Advisory/1-on-1s",text: $GAName)
+                        ColorPicker("", selection: $GAColor, supportsOpacity: false)
+                    }
+                    HStack {
+                        TextField("A",text: $AName)
+                        ColorPicker("", selection: $AColor, supportsOpacity: false)
+                    }
+                    HStack {
+                        TextField("B",text: $BName)
+                        ColorPicker("", selection: $BColor, supportsOpacity: false)
+                    }
+                    HStack {
+                        TextField("C",text: $CName)
+                        ColorPicker("", selection: $CColor, supportsOpacity: false)
+                    }
+                    HStack {
+                        TextField("D",text: $DName)
+                        ColorPicker("", selection: $DColor, supportsOpacity: false)
+                    }
+                    HStack {
+                        TextField("E",text: $EName)
+                        ColorPicker("", selection: $EColor, supportsOpacity: false)
+                    }
+                    HStack {
+                        TextField("F",text: $FName)
+                        ColorPicker("", selection: $FColor, supportsOpacity: false)
+                    }
+                    HStack {
+                        TextField("Lunch",text: $LunchName)
+                        ColorPicker("", selection: $LunchColor, supportsOpacity: false)
+                    }
+                    HStack {
+                        TextField("Tutorial",text: $TutorialName)
+                        ColorPicker("", selection: $TutorialColor, supportsOpacity: false)
+                    }
                 }
             }
             
@@ -117,7 +145,20 @@ struct SettingsView: View {
             "Lunch":                  try? colorToData(UIColor(LunchColor)),
             "Tutorial":               try? colorToData(UIColor(TutorialColor))
         ]
+        let blockNames: [String: String] = [
+            "Morning Meeting":          MMName,
+            "Group Advisory/1-on-1s":   GAName,
+            "A":                        AName,
+            "B":                        BName,
+            "C":                        CName,
+            "D":                        DName,
+            "E":                        EName,
+            "F":                        FName,
+        "Lunch":                        LunchName,
+        "Tutorial":                     TutorialName
+        ]
         UserDefaults.standard.set(colorDict, forKey: "colorDict")
+        UserDefaults.standard.set(blockNames, forKey: "blockNames")
     }
 }
 

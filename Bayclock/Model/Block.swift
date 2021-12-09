@@ -134,7 +134,7 @@ func getClass(schedule: [Day], time: TimeStruct) -> String {
     
         // if the time is between the start and end of the current block, return the name of the block.
         if (currentTime > timeToSeconds(hour: currentSchedule[index].start.hour, minute: currentSchedule[index].start.minute, second: 0) && currentTime < timeToSeconds(hour: currentSchedule[index].end.hour, minute: currentSchedule[index].end.minute, second: 0)) {
-            returnValue = "Current Block: \(currentSchedule[index].name)"
+            returnValue = "Current Block: \(getName(name: currentSchedule[index].name))"
         }
         
         if (currentTime > timeToSeconds(hour: currentSchedule[index].end.hour, minute: currentSchedule[index].end.minute, second: 0)) {
@@ -144,7 +144,7 @@ func getClass(schedule: [Day], time: TimeStruct) -> String {
             }
             // if the time is after the end of the current block but before the start of the next, return passing period along with the name of the next block.
             else if (currentTime < timeToSeconds(hour: currentSchedule[index + 1].start.hour, minute: currentSchedule[index + 1].start.minute, second: 0)) {
-                returnValue = "Passing period. Next Block: \(currentSchedule[index + 1].name)"
+                returnValue = "Passing period. Next Block: \(getName(name: currentSchedule[index + 1].name))"
             }
         }
     }

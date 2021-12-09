@@ -8,6 +8,12 @@
 import Foundation
 import SwiftUI
 
+extension Double {
+    func truncate(places : Int)-> Double {
+        return Double(floor(pow(10.0, Double(places)) * self)/pow(10.0, Double(places)))
+    }
+}
+
 // Defines a block struct that has a name, start time, and end time
 struct Block: Hashable, Codable {
     var name: String
@@ -35,7 +41,10 @@ struct Block: Hashable, Codable {
             return returnValue
         }
     }
-    
+}
+
+func getName(name: String) -> String {
+    return("E")
 }
 
 // Turns a UIColor into data that is storable in UserDefaults.

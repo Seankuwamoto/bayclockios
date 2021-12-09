@@ -61,6 +61,10 @@ struct BlockRow: View {
                             .strokeBorder()
                             .frame(width: rectLength - 50, height: barWidth)
                             .foregroundColor(.black)
+                        if (block.fractionComplete(time: time) > 0 && block.fractionComplete(time: time) < 1) {
+                            Text("\(String(format: "%.1f", block.fractionComplete(time: time) * 100))%")
+                                .frame(width: rectLength - 50, height: barWidth)
+                        }
                     }
                     .padding(.top, barPaddingTop)}
             }

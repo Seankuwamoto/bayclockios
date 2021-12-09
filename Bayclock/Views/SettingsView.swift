@@ -19,6 +19,16 @@ struct SettingsView: View {
     @State public var FColor = getColor(name: "F")
     @State public var LunchColor = getColor(name: "Lunch")
     @State public var TutorialColor = getColor(name: "Tutorial")
+    @State public var MMName = getName(name: "Morning Meeting")
+    @State public var GAName = getName(name: "Group Advisory/1-on-1s")
+    @State public var AName = getName(name: "A")
+    @State public var BName = getName(name: "B")
+    @State public var CName = getName(name: "C")
+    @State public var DName = getName(name: "D")
+    @State public var EName = getName(name: "E")
+    @State public var FName = getName(name: "F")
+    @State public var LunchName = getName(name: "Lunch")
+    @State public var TutorialName = getName(name: "Tutorial")
     @AppStorage("compressedMode") var compressedMode = false
     @AppStorage("hideCompleted") var hideCompleted = false
     
@@ -50,7 +60,10 @@ struct SettingsView: View {
                 }
                 // Color pickers for each of the class colors.
                 Group {
-                    ColorPicker("Morning Meeting", selection: $MMColor, supportsOpacity: false)
+                    ColorPicker(TextField(
+                        "\(MMName)",
+                        text: $MMName
+                    ), selection: $MMColor, supportsOpacity: false)
                     ColorPicker("Group Advisory/1-on-1s", selection: $GAColor, supportsOpacity: false)
                     ColorPicker("A", selection: $AColor, supportsOpacity: false)
                     ColorPicker("B", selection: $BColor, supportsOpacity: false)

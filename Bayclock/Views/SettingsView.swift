@@ -64,42 +64,52 @@ struct SettingsView: View {
                     HStack {
                         TextField("Morning Meeting",text: $MMName)
                         ColorPicker("", selection: $MMColor, supportsOpacity: false)
+                            .labelsHidden()
                     }
                     HStack {
                         TextField("Group Advisory/1-on-1s",text: $GAName)
                         ColorPicker("", selection: $GAColor, supportsOpacity: false)
+                            .labelsHidden()
                     }
                     HStack {
                         TextField("A",text: $AName)
                         ColorPicker("", selection: $AColor, supportsOpacity: false)
+                            .labelsHidden()
                     }
                     HStack {
                         TextField("B",text: $BName)
                         ColorPicker("", selection: $BColor, supportsOpacity: false)
+                            .labelsHidden()
                     }
                     HStack {
                         TextField("C",text: $CName)
                         ColorPicker("", selection: $CColor, supportsOpacity: false)
+                            .labelsHidden()
                     }
                     HStack {
                         TextField("D",text: $DName)
                         ColorPicker("", selection: $DColor, supportsOpacity: false)
+                            .labelsHidden()
                     }
                     HStack {
                         TextField("E",text: $EName)
                         ColorPicker("", selection: $EColor, supportsOpacity: false)
+                            .labelsHidden()
                     }
                     HStack {
                         TextField("F",text: $FName)
                         ColorPicker("", selection: $FColor, supportsOpacity: false)
+                            .labelsHidden()
                     }
                     HStack {
                         TextField("Lunch",text: $LunchName)
                         ColorPicker("", selection: $LunchColor, supportsOpacity: false)
+                            .labelsHidden()
                     }
                     HStack {
                         TextField("Tutorial",text: $TutorialName)
                         ColorPicker("", selection: $TutorialColor, supportsOpacity: false)
+                            .labelsHidden()     
                     }
                 }
             }

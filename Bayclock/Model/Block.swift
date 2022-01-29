@@ -94,18 +94,30 @@ func colorToData(_ c: UIColor) throws -> Data {
 func getColor(name: String) -> Color {
     
     // Set all defaults
+//    let colorDict: [String: Data?] = [
+//        "Morning Meeting":        try? colorToData(UIColor(Color(red: 131/255.0, green: 89/255.0, blue: 149/255.0))),
+//        "Group Advisory/1-on-1s": try? colorToData(UIColor(Color(red: 131/255.0, green: 89/255.0, blue: 149/255.0))),
+//        "A":                      try? colorToData(UIColor(Color(red: 190/255.0, green: 213/255.0, blue: 101/255.0))),
+//        "B":                      try? colorToData(UIColor(Color(red: 0/255.0, green:144/255.0, blue: 166/255.0))),
+//        "C":                      try? colorToData(UIColor(Color(red: 247/255.0, green: 183/255.0, blue: 78/255.0))),
+//        "D":                      try? colorToData(UIColor(Color(red: 239/225.0, green: 145/255.0, blue: 62/255.0))),
+//        "E":                      try? colorToData(UIColor(Color(red: 8/255.0, green: 158/255.0, blue: 180/255.0))),
+//        "F":                      try? colorToData(UIColor(Color(red: 218/255.0, green: 82/255.0, blue: 101/255.0))),
+//        "Lunch":                  try? colorToData(UIColor(Color(red: 82/255.0, green: 167/255.0, blue: 134/255.0))),
+//        "Tutorial":               try? colorToData(UIColor(Color(red: 230/255.0, green: 217/255.0, blue: 67/255.0)))
+//    ]
     let colorDict: [String: Data?] = [
-        "Morning Meeting":        try? colorToData(UIColor(Color(red: 131/255.0, green: 89/255.0, blue: 149/255.0))),
-        "Group Advisory/1-on-1s": try? colorToData(UIColor(Color(red: 131/255.0, green: 89/255.0, blue: 149/255.0))),
-        "A":                      try? colorToData(UIColor(Color(red: 190/255.0, green: 213/255.0, blue: 101/255.0))),
-        "B":                      try? colorToData(UIColor(Color(red: 0/255.0, green:144/255.0, blue: 166/255.0))),
-        "C":                      try? colorToData(UIColor(Color(red: 247/255.0, green: 183/255.0, blue: 78/255.0))),
-        "D":                      try? colorToData(UIColor(Color(red: 239/225.0, green: 145/255.0, blue: 62/255.0))),
-        "E":                      try? colorToData(UIColor(Color(red: 8/255.0, green: 158/255.0, blue: 180/255.0))),
-        "F":                      try? colorToData(UIColor(Color(red: 218/255.0, green: 82/255.0, blue: 101/255.0))),
-        "Lunch":                  try? colorToData(UIColor(Color(red: 82/255.0, green: 167/255.0, blue: 134/255.0))),
-        "Tutorial":               try? colorToData(UIColor(Color(red: 230/255.0, green: 217/255.0, blue: 67/255.0)))
-    ]
+            "Morning Meeting":        try? colorToData(UIColor(Color(red: 90/255.0, green: 164/255.0, blue: 217/255.0))),
+            "Group Advisory/1-on-1s": try? colorToData(UIColor(Color(red: 90/255.0, green: 164/255.0, blue: 217/255.0))),
+            "A":                      try? colorToData(UIColor(Color(red: 90/255.0, green: 164/255.0, blue: 217/255.0))),
+            "B":                      try? colorToData(UIColor(Color(red: 90/255.0, green: 164/255.0, blue: 217/255.0))),
+            "C":                      try? colorToData(UIColor(Color(red: 90/255.0, green: 164/255.0, blue: 217/255.0))),
+            "D":                      try? colorToData(UIColor(Color(red: 90/255.0, green: 164/255.0, blue: 217/255.0))),
+            "E":                      try? colorToData(UIColor(Color(red: 90/255.0, green: 164/255.0, blue: 217/255.0))),
+            "F":                      try? colorToData(UIColor(Color(red: 90/255.0, green: 164/255.0, blue: 217/255.0))),
+            "Lunch":                  try? colorToData(UIColor(Color(red: 90/255.0, green: 164/255.0, blue: 217/255.0))),
+            "Tutorial":               try? colorToData(UIColor(Color(red: 90/255.0, green: 164/255.0, blue: 217/255.0)))
+        ]
 
     // Set colors to defaults if they do not exist
     if (UserDefaults.standard.dictionary(forKey: "colorDict") == nil) {

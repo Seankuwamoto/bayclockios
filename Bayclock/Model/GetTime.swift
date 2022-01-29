@@ -25,12 +25,12 @@ func getTime() -> TimeStruct {
     let date = Date()
     let calendar = Calendar.current
     
-    let year = calendar.component(.year, from: date) - 1
-    let month = calendar.component(.month, from: date) + 11
-    let day = calendar.component(.day, from: date) - 26
-    let weekday = calendar.component(.weekday, from: date) - 1
+    let year = calendar.component(.year, from: date)
+    let month = calendar.component(.month, from: date)
+    let day = calendar.component(.day, from: date)
+    let weekday = calendar.component(.weekday, from: date)
     let hour = calendar.component(.hour, from: date)
-    let minute = calendar.component(.minute, from: date) 
+    let minute = calendar.component(.minute, from: date)
     let second = calendar.component(.second, from: date)
     
     return TimeStruct(year: year, month: month, day: day, weekday: weekday, hour: hour, minute: minute, second: second)

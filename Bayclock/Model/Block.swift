@@ -57,12 +57,22 @@ func getName(name: String) -> String {
         "Tutorial": "Tutorial"
     ]
     
+    // If the dictionary is not in user defaults, add it.
     if (UserDefaults.standard.dictionary(forKey: "blockNames") == nil) {
         UserDefaults.standard.set(blockNames, forKey: "blockNames")
     }
-    if (UserDefaults.standard.dictionary(forKey: "blockNames")![name] as! String == "") {
+    
+    // If this block is not in the dictionary, return the name (for example, this might be a special block)
+    if (UserDefaults.standard.dictionary(forKey: "blockNames")![name] == nil) {
+        return name
+    }
+
+    // If the name has been set to empty, return the original default.
+    else if (UserDefaults.standard.dictionary(forKey: "blockNames")![name] as! String == "") {
         return blockNames[name]!
     }
+    
+    // Return the name they typed.
     else {
         return UserDefaults.standard.dictionary(forKey: "blockNames")![name] as! String
     }
@@ -114,10 +124,9 @@ func getColor(name: String) -> Color {
         }
     }
 
-    // If all else fails, return red.
-    return Color(red: 1.0, green: 0.0, blue: 0.0)
+    // If all else fails, return blue color.
+    return Color(red: 90/255.0, green: 164/255.0, blue: 217/255.0)
 }
-
 
 //Gets the name of the current class, or gets passing period + name of next class if they are inbetween classes
 func getClass(schedule: [Day], time: TimeStruct) -> String {

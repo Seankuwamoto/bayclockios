@@ -16,6 +16,8 @@
 		9F3A54432750414000781A91 /* BayclockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A54422750414000781A91 /* BayclockUITestsLaunchTests.swift */; };
 		9F3AB934275DBCD5000CC8F8 /* DeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AB933275DBCD5000CC8F8 /* DeveloperView.swift */; };
 		9F834BD427A369D800C1B45B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F834BD327A369D800C1B45B /* HomeView.swift */; };
+		9F834BD627A4D31C00C1B45B /* schedule2.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F834BD527A4D31C00C1B45B /* schedule2.json */; };
+		9F834BDA27A5BCC200C1B45B /* special_schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F834BD927A5BCC200C1B45B /* special_schedule.json */; };
 		9FB82A91275045B800720CA4 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82A90275045B800720CA4 /* ModelData.swift */; };
 		9FB82A9327504E4000720CA4 /* schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FB82A9227504E4000720CA4 /* schedule.json */; };
 		9FB82A962750518E00720CA4 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82A952750518E00720CA4 /* Day.swift */; };
@@ -58,6 +60,8 @@
 		9F3A54422750414000781A91 /* BayclockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayclockUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9F3AB933275DBCD5000CC8F8 /* DeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperView.swift; sourceTree = "<group>"; };
 		9F834BD327A369D800C1B45B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9F834BD527A4D31C00C1B45B /* schedule2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schedule2.json; sourceTree = "<group>"; };
+		9F834BD927A5BCC200C1B45B /* special_schedule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = special_schedule.json; sourceTree = "<group>"; };
 		9FB82A90275045B800720CA4 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		9FB82A9227504E4000720CA4 /* schedule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schedule.json; sourceTree = "<group>"; };
 		9FB82A952750518E00720CA4 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				9FB82A9227504E4000720CA4 /* schedule.json */,
+				9F834BD527A4D31C00C1B45B /* schedule2.json */,
+				9F834BD927A5BCC200C1B45B /* special_schedule.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -291,7 +297,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F834BDA27A5BCC200C1B45B /* special_schedule.json in Resources */,
 				9F3A542D2750414000781A91 /* Preview Assets.xcassets in Resources */,
+				9F834BD627A4D31C00C1B45B /* schedule2.json in Resources */,
 				9FB82A9327504E4000720CA4 /* schedule.json in Resources */,
 				9F3A542A2750414000781A91 /* Assets.xcassets in Resources */,
 			);

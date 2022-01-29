@@ -25,10 +25,10 @@ func getTime() -> TimeStruct {
     let date = Date()
     let calendar = Calendar.current
     
-    let year = calendar.component(.year, from: date)
-    let month = calendar.component(.month, from: date)
-    let day = calendar.component(.day, from: date)
-    let weekday = calendar.component(.weekday, from: date)
+    let year = calendar.component(.year, from: date) - 1
+    let month = calendar.component(.month, from: date) + 11
+    let day = calendar.component(.day, from: date) - 26
+    let weekday = calendar.component(.weekday, from: date) - 1
     let hour = calendar.component(.hour, from: date)
     let minute = calendar.component(.minute, from: date) 
     let second = calendar.component(.second, from: date)
@@ -147,4 +147,12 @@ func timeToString(hour: Int, minute: Int, second: Int, hasSeconds: Bool) -> Stri
 
 func timeToSeconds(hour: Int, minute: Int, second: Int) -> Int {
     return hour * 60 * 60 + minute * 60 + second
+}
+
+func normalizeDate(date: String) -> String {
+    let year = date.split(separator: "/")[0]
+    let month = String(format: "%02d", Int(date.split(separator: "/")[1]) ?? 0)
+    let day = String(format: "%02d", Int(date.split(separator: "/")[2]) ?? 0)
+    return "\(year)/\(month)/\(day)"
+
 }

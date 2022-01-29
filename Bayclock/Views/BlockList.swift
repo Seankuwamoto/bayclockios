@@ -36,10 +36,19 @@ struct BlockList: View {
                     }
                     Text(getClass(schedule: modelData.schedule, time: time))
                     Text(timeLeft(schedule: modelData.schedule, time: time))
-                    ForEach(modelData.schedule[time.weekday - 2].blocks, id: \.self) { Block in
-                        BlockRow(block: Block, time: time)
-                            .padding(.top, barSpacing)
+                    if (UserDefaults.standard.bool(forKey: "compressedMode") ==  true) {
+                        ForEach(modelData.schedule[time.weekday - 2].blocks, id: \.self) { Block in
+                            BlockRow(block: Block, compressedIsOn: true, time: time)
+                                .padding(.top, barSpacing)
+                        }
                     }
+                    else {
+                        ForEach(modelData.schedule[time.weekday - 2].blocks, id: \.self) { Block in
+                            BlockRow(block: Block, compressedIsOn: false, time: time)
+                                .padding(.top, barSpacing)
+                        }
+                    }
+                    
                 }
                 else {
                     Text("\(timeToString(hour: time.hour, minute: time.minute, second: time.second, hasSeconds: false))")

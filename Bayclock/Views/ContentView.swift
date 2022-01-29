@@ -12,6 +12,12 @@ struct ContentView: View {
     var body: some View {
         // the main view of the app.
         TabView{
+            HomeView()
+                .environmentObject(ModelData())
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Home")
+                }
             BlockList()
                 .environmentObject(ModelData())
                 .tabItem {
@@ -28,11 +34,11 @@ struct ContentView: View {
                     Image(systemName: "gearshape")
                     Text("Settings")
                 }
-            DeveloperView()
-                .tabItem {
-                    Image(systemName: "lock.iphone")
-                    Text("Developer")
-                }
+//            DeveloperView()
+//                .tabItem {
+//                    Image(systemName: "lock.iphone")
+//                    Text("Developer")
+//                }
         }
     }
 }

@@ -15,6 +15,7 @@
 		9F3A54412750414000781A91 /* BayclockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A54402750414000781A91 /* BayclockUITests.swift */; };
 		9F3A54432750414000781A91 /* BayclockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A54422750414000781A91 /* BayclockUITestsLaunchTests.swift */; };
 		9F3AB934275DBCD5000CC8F8 /* DeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AB933275DBCD5000CC8F8 /* DeveloperView.swift */; };
+		9F834BD427A369D800C1B45B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F834BD327A369D800C1B45B /* HomeView.swift */; };
 		9FB82A91275045B800720CA4 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82A90275045B800720CA4 /* ModelData.swift */; };
 		9FB82A9327504E4000720CA4 /* schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FB82A9227504E4000720CA4 /* schedule.json */; };
 		9FB82A962750518E00720CA4 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82A952750518E00720CA4 /* Day.swift */; };
@@ -56,6 +57,7 @@
 		9F3A54402750414000781A91 /* BayclockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayclockUITests.swift; sourceTree = "<group>"; };
 		9F3A54422750414000781A91 /* BayclockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayclockUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9F3AB933275DBCD5000CC8F8 /* DeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperView.swift; sourceTree = "<group>"; };
+		9F834BD327A369D800C1B45B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9FB82A90275045B800720CA4 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		9FB82A9227504E4000720CA4 /* schedule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schedule.json; sourceTree = "<group>"; };
 		9FB82A952750518E00720CA4 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				9FB82AAC2752B83E00720CA4 /* SettingsView.swift */,
 				9FF07534275D3D6B0070FA70 /* TestBar.swift */,
 				9F3AB933275DBCD5000CC8F8 /* DeveloperView.swift */,
+				9F834BD327A369D800C1B45B /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			files = (
 				9FB82AA62751A43200720CA4 /* GetTime.swift in Sources */,
 				9FB82A91275045B800720CA4 /* ModelData.swift in Sources */,
+				9F834BD427A369D800C1B45B /* HomeView.swift in Sources */,
 				9FB82A9E27509C0400720CA4 /* BlockList.swift in Sources */,
 				9F3AB934275DBCD5000CC8F8 /* DeveloperView.swift in Sources */,
 				9F3A54282750413E00781A91 /* ContentView.swift in Sources */,

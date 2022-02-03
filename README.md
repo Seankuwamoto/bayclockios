@@ -13,7 +13,7 @@ Github repo for bayclock website: [https://github.com/FairfieldBW/clock](https:/
 
 ## Maintaining
 
-Currently, all the data for classes, lunch menus, breaks, and other updating things are stored locally, but by 1.0 release, it should all be coming from the bayclock website. This means that if the app is out of date, it's because of the website is too.
+Currently, all the data for classes, lunch menus, breaks, immersives, and special events are stored locally, but by 1.0 release, it should all be coming from the bayclock website. This means that if the app is out of date, it's because of the website is too.
 
 ## Downloading/Installing
 

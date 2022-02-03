@@ -1,0 +1,32 @@
+{
+    "Immersive1": ["2022/1/3", "2022/1/27"],
+    "Immersive2": ["2022/5/1", "2022/06/18"],
+    "Immersive1 Schedule": {
+        "Immersive 1 Morning": [
+            [9, 0],
+            [11, 30]
+        ],
+        "Lunch": [
+            [11, 30],
+            [12, 30]
+        ],
+        "Immersive 1 Afternoon": [
+            [12, 30],
+            [15, 0]
+        ]
+    },
+    "Immersive2 Schedule": {
+        "Immersive 2": [
+            [9, 0],
+            [11, 30]
+        ],
+        "Lunch": [
+            [11, 30],
+            [12, 30]
+        ],
+        "Immersive 2": [
+            [12, 30],
+            [15, 0]
+        ]
+    }
+}

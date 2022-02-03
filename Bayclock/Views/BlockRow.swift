@@ -31,10 +31,10 @@ struct BlockRow: View {
                         Text(getName(name: block.name))
                             .font(.headline)
                             .padding(.leading, 50.0)
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
                         Spacer()
                         Text("\(timeToString(hour: block.start.hour, minute: block.start.minute, second: 0 , hasSeconds: false)) - \(timeToString(hour: block.end.hour, minute: block.end.minute, second: 0 , hasSeconds: false))")
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
                             .font(.subheadline)
                             .padding(.trailing, 50)
 
@@ -58,14 +58,14 @@ struct BlockRow: View {
                                 }
                             )
                             //.clipShape(RoundedRectangle(cornerRadius: 20))
-                        RoundedRectangle(cornerRadius: 20)
-                            .strokeBorder()
-                            .frame(width: rectLength - 50, height: barWidth)
-                            .foregroundColor(.black)
-                        if (block.fractionComplete(time: time) > 0 && block.fractionComplete(time: time) < 1) {
-                            Text("\(String(format: "%.1f", block.fractionComplete(time: time) * 100))%")
-                                .frame(width: rectLength - 50, height: barWidth)
-                        }
+//                        RoundedRectangle(cornerRadius: 20)
+//                            .strokeBorder()
+//                            .frame(width: rectLength - 50, height: barWidth)
+//                            .foregroundColor(.white)
+//                        if (block.fractionComplete(time: time) > 0 && block.fractionComplete(time: time) < 1) {
+//                            Text("\(String(format: "%.1f", block.fractionComplete(time: time) * 100))%")
+//                                .frame(width: rectLength - 50, height: barWidth)
+//                        }
                     }
                     .padding(.top, barPaddingTop)}
             }

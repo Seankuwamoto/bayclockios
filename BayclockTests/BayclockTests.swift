@@ -18,7 +18,23 @@ class BayclockTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testCompareDates() throws {
+        // The date should be considered the same, even though one has zeros and the other doesn't.
+        XCTAssert(compareDates(date1: "2001/05/03", date2: "2001/5/3") == 0)
+
+        // If the date is less or greater, make sure it returns the right thing.
+        XCTAssert(compareDates(date1: "2001/05/02", date2: "2001/5/3") < 0)
+        XCTAssert(compareDates(date1: "2001/05/04", date2: "2001/5/3") > 0)
+
+        // If the month is less or greater, make sure it returns the right thing.
+        XCTAssert(compareDates(date1: "2001/04/03", date2: "2001/5/3") < 0)
+        XCTAssert(compareDates(date1: "2001/06/03", date2: "2001/5/3") > 0)
+
+        // If the month and day are both different, make sure the month takes precedence.
+        XCTAssert(compareDates(date1: "2001/04/04", date2: "2001/5/3") < 0)
+        XCTAssert(compareDates(date1: "2001/06/02", date2: "2001/5/3") > 0)
+
+
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }

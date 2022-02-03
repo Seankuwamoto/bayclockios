@@ -156,3 +156,46 @@ func normalizeDate(date: String) -> String {
     return "\(year)/\(month)/\(day)"
 
 }
+
+// takes in two dates as strings in the format of "YYYY/MM/DD".
+func compareDates(date1: String, date2: String) -> Int {
+    
+    // breaks up the date strings and normalizes them.
+    let split1 = date1.split(separator: "/")
+    let year1 = Int(split1[0]) ?? 0
+    let month1 = Int(split1[1]) ?? 0
+    let day1 = Int(split1[2]) ?? 0
+
+    let split2 = date2.split(separator: "/")
+    let year2 = Int(split2[0]) ?? 0
+    let month2 = Int(split2[1]) ?? 0
+    let day2 = Int(split2[2]) ?? 0
+   
+    // returns 1 if the first date is greater, -1 if the second date is greater, and 0 if they are equal.
+    if (year1 > year2) {
+        return 1
+    }
+    else if (year1 < year2) {
+        return -1
+    }
+    else {
+        if (month1 > month2) {
+            return 1
+        }
+        else if (month1 < month2) {
+            return -1
+        }
+        else {
+            if (day1 > day2) {
+                return 1
+            }
+            else if (day1 < day2) {
+                return -1
+            }
+            else {
+                return 0
+            }
+        }
+    }
+    
+}

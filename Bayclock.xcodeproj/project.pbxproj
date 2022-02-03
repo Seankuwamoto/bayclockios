@@ -20,6 +20,8 @@
 		9F834BDA27A5BCC200C1B45B /* special_schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F834BD927A5BCC200C1B45B /* special_schedule.json */; };
 		9F834BDC27A8E6B700C1B45B /* breaks.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F834BDB27A8E6B700C1B45B /* breaks.json */; };
 		9F834BDE27A8E6D200C1B45B /* immersives.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F834BDD27A8E6D200C1B45B /* immersives.json */; };
+		9F834BE127AB98F400C1B45B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9F834BDF27AB98F400C1B45B /* LICENSE */; };
+		9F834BE227AB98F400C1B45B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9F834BE027AB98F400C1B45B /* README.md */; };
 		9FB82A91275045B800720CA4 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82A90275045B800720CA4 /* ModelData.swift */; };
 		9FB82A9327504E4000720CA4 /* schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FB82A9227504E4000720CA4 /* schedule.json */; };
 		9FB82A962750518E00720CA4 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82A952750518E00720CA4 /* Day.swift */; };
@@ -66,6 +68,8 @@
 		9F834BD927A5BCC200C1B45B /* special_schedule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = special_schedule.json; sourceTree = "<group>"; };
 		9F834BDB27A8E6B700C1B45B /* breaks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = breaks.json; sourceTree = "<group>"; };
 		9F834BDD27A8E6D200C1B45B /* immersives.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = immersives.json; sourceTree = "<group>"; };
+		9F834BDF27AB98F400C1B45B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		9F834BE027AB98F400C1B45B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		9FB82A90275045B800720CA4 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		9FB82A9227504E4000720CA4 /* schedule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schedule.json; sourceTree = "<group>"; };
 		9FB82A952750518E00720CA4 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 		9F3A54242750413E00781A91 /* Bayclock */ = {
 			isa = PBXGroup;
 			children = (
+				9F834BDF27AB98F400C1B45B /* LICENSE */,
+				9F834BE027AB98F400C1B45B /* README.md */,
 				9F3A54252750413E00781A91 /* BayclockApp.swift */,
 				9FB82A8F275044F400720CA4 /* Views */,
 				9FB82A8E275044E700720CA4 /* Resources */,
@@ -305,9 +311,11 @@
 			files = (
 				9F834BDA27A5BCC200C1B45B /* special_schedule.json in Resources */,
 				9F834BDC27A8E6B700C1B45B /* breaks.json in Resources */,
+				9F834BE127AB98F400C1B45B /* LICENSE in Resources */,
 				9F3A542D2750414000781A91 /* Preview Assets.xcassets in Resources */,
 				9F834BD627A4D31C00C1B45B /* schedule2.json in Resources */,
 				9FB82A9327504E4000720CA4 /* schedule.json in Resources */,
+				9F834BE227AB98F400C1B45B /* README.md in Resources */,
 				9F834BDE27A8E6D200C1B45B /* immersives.json in Resources */,
 				9F3A542A2750414000781A91 /* Assets.xcassets in Resources */,
 			);

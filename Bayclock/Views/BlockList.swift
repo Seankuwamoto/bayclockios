@@ -17,8 +17,14 @@ struct BlockList: View {
     var body: some View {
         ScrollView {
             VStack() {
-                
-                if (time.weekday > 1 && time.weekday < 7) {
+                if (whatBreakIsToday(breaks: modelData.breaks) != nil){
+                    Text("\(timeToString(hour: time.hour, minute: time.minute, second: time.second, hasSeconds: false))")
+                        .font(.largeTitle)
+                        .padding(.top, UIScreen.main.bounds.size.height/2 - 80)
+                    Text(dateToString(weekday: time.weekday, month: time.month, day: time.day))
+                    Text(whatBreakIsToday(breaks: modelData.breaks)!)
+                }
+                else if (time.weekday > 1 && time.weekday < 7) {
                     if (UserDefaults.standard.bool(forKey: "compressedMode") ==  true) {
                         
                         Text("\(timeToString(hour: time.hour, minute: time.minute, second: time.second, hasSeconds: false))")

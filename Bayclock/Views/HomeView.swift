@@ -13,8 +13,14 @@ struct HomeView: View {
     @State private var time = getTime()
     var body: some View {
         VStack() {
-            
-            if (time.weekday > 1 && time.weekday < 7) {
+            if (whatBreakIsToday(breaks: modelData.breaks) != nil) {
+                Text("\(timeToString(hour: time.hour, minute: time.minute, second: time.second, hasSeconds: false))")
+                    .font(.largeTitle)
+                    .padding(.top, UIScreen.main.bounds.size.height/2 - 80)
+                Text(dateToString(weekday: time.weekday, month: time.month, day: time.day))
+                Text(whatBreakIsToday(breaks: modelData.breaks)!)
+            }
+            else if (time.weekday > 1 && time.weekday < 7){
                 Text("\(timeToString(hour: time.hour, minute: time.minute, second: time.second, hasSeconds: false))")
                     .font(.title)
                     .padding(.top, 50.0)
@@ -30,7 +36,7 @@ struct HomeView: View {
                 Text(dateToString(weekday: time.weekday, month: time.month, day: time.day))
                 Text("Today is a weekend!")
             }
-            if (time.weekday > 1 && time.weekday < 7) {
+            if (time.weekday > 1 && time.weekday < 7 && whatBreakIsToday(breaks: modelData.breaks) == nil) {
                 ForEach(modelData.schedule[time.weekday - 2].blocks, id: \.self) { Block in
                     if (Block.fractionComplete(time: time) > 0.0 && Block.fractionComplete(time: time) < 1.0) {
                         BlockRow(block: Block, compressedIsOn: false, time: time)

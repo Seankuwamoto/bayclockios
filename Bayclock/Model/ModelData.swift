@@ -12,6 +12,7 @@ import SwiftUI
 final class ModelData: ObservableObject {
     // Loads the schedule from schedule.json
     @Published var schedule = scheduleToBetterSchedule(schedule: newLoad("schedule2.json")!, specialSchedule: newLoad("special_schedule.json")!, immersives: newLoad("immersives.json")!)
+    @Published var breaks = newLoad("breaks.json")
 }
 
 func load<T: Decodable>(_ filename: String) -> T {
@@ -121,3 +122,16 @@ func scheduleToBetterSchedule(schedule: [String: Any], specialSchedule: [String:
     return newSchedule
 }
 
+func whatBreakIsToday(breaks: [String: Any]?) -> String? {
+    var returnValue: String? = nil
+    if let unwrappedBreaks = breaks as! [String: [String]]? {
+        let currentDate = "\(getTime().year)/\(String(format: "%02d", getTime().month))/\(String(format: "%02d", getTime().day))"
+        for (name, dates) in unwrappedBreaks {
+            if (compareDates(date1: currentDate, date2: dates[0]) > 0 && compareDates(date1: currentDate, date2: dates[1]) < 1) {
+                returnValue = name
+            }
+        }
+    }
+    
+    return returnValue
+}

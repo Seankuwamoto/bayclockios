@@ -72,6 +72,10 @@ func getName(name: String) -> String {
         return blockNames[name]!
     }
     
+    else if (UserDefaults.standard.dictionary(forKey: "blockNames")![name] as! String == "placeholder") {
+        Secret.isSecretActive = true
+        return UserDefaults.standard.dictionary(forKey: "blockNames")![name] as! String
+    }
     // Return the name they typed.
     else {
         return UserDefaults.standard.dictionary(forKey: "blockNames")![name] as! String

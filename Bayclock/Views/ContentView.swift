@@ -34,6 +34,13 @@ struct ContentView: View {
                     Image(systemName: "gearshape")
                     Text("Settings")
                 }
+            if(Secret.isSecretActive) {
+                SecretView()
+                    .tabItem {
+                        Image(systemName: "lock")
+                        Text("")
+                    }
+            }
 //            DeveloperView()
 //                .tabItem {
 //                    Image(systemName: "lock.iphone")

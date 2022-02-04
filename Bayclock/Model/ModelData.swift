@@ -127,7 +127,7 @@ func whatBreakIsToday(breaks: [String: Any]?) -> String? {
     if let unwrappedBreaks = breaks as! [String: [String]]? {
         let currentDate = "\(getTime().year)/\(String(format: "%02d", getTime().month))/\(String(format: "%02d", getTime().day))"
         for (name, dates) in unwrappedBreaks {
-            if (compareDates(date1: currentDate, date2: dates[0]) > 0 && compareDates(date1: currentDate, date2: dates[1]) < 1) {
+            if (compareDates(date1: currentDate, date2: dates[0]) > 0 && compareDates(date1: currentDate, date2: dates[1]) < 0) {
                 returnValue = name
             }
         }

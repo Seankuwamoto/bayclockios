@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "menu_feb22.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -9,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "menu_feb22.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

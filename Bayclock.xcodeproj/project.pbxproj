@@ -23,6 +23,7 @@
 		9F834BE127AB98F400C1B45B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9F834BDF27AB98F400C1B45B /* LICENSE */; };
 		9F834BE227AB98F400C1B45B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9F834BE027AB98F400C1B45B /* README.md */; };
 		9F834BE427ACDC4800C1B45B /* SecretView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F834BE327ACDC4800C1B45B /* SecretView.swift */; };
+		9F834BE827B092EA00C1B45B /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F834BE727B092EA00C1B45B /* ZoomableScrollView.swift */; };
 		9FB82A91275045B800720CA4 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82A90275045B800720CA4 /* ModelData.swift */; };
 		9FB82A962750518E00720CA4 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82A952750518E00720CA4 /* Day.swift */; };
 		9FB82A98275054F700720CA4 /* BlockRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82A97275054F700720CA4 /* BlockRow.swift */; };
@@ -71,6 +72,7 @@
 		9F834BDF27AB98F400C1B45B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		9F834BE027AB98F400C1B45B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		9F834BE327ACDC4800C1B45B /* SecretView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretView.swift; sourceTree = "<group>"; };
+		9F834BE727B092EA00C1B45B /* ZoomableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
 		9FB82A90275045B800720CA4 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		9FB82A952750518E00720CA4 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		9FB82A97275054F700720CA4 /* BlockRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockRow.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				9FB82A952750518E00720CA4 /* Day.swift */,
 				9FB82A992750553E00720CA4 /* Block.swift */,
 				9FB82AA52751A43200720CA4 /* GetTime.swift */,
+				9F834BE727B092EA00C1B45B /* ZoomableScrollView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				9FB82AAB2752B5EE00720CA4 /* MenuView.swift in Sources */,
 				9FB82AAD2752B83E00720CA4 /* SettingsView.swift in Sources */,
 				9FB82A962750518E00720CA4 /* Day.swift in Sources */,
+				9F834BE827B092EA00C1B45B /* ZoomableScrollView.swift in Sources */,
 				9FB82A9A2750553E00720CA4 /* Block.swift in Sources */,
 				9FB82A98275054F700720CA4 /* BlockRow.swift in Sources */,
 				9F3A54262750413E00781A91 /* BayclockApp.swift in Sources */,

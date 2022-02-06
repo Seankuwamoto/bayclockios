@@ -25,7 +25,12 @@ struct MenuView: View {
 //    }
 //
     var body: some View {
-        Image("menu")
+        ZoomableScrollView {
+            Image("menu")
+                .resizable()
+                .scaledToFit()
+        }
+        
     }
 }
 

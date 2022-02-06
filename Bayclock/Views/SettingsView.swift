@@ -9,12 +9,14 @@ import SwiftUI
 import UIKit
 import CryptoKit
 
+// Adds an extention to the view clas which allows you to call the hideKeyboard function which hides the keyboard when called.
 extension View {
     func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
 
+// A view with settings for block names and colors.
 struct SettingsView: View {
     // Creates temporary variables for all of the settings
     @State public var MMColor = getColor(name: "Morning Meeting")
@@ -43,7 +45,7 @@ struct SettingsView: View {
     @AppStorage("showPercentages") var showPercentages = false
     @AppStorage("isSecretActive") var isSecretActive = false
     
-
+    // Main display
     var body: some View {
         VStack {
             HStack {
@@ -51,7 +53,7 @@ struct SettingsView: View {
                 Text("Settings")
                     .padding(.leading, 40)
                 Spacer()
-                // Save button.
+                // Save button
                 Button(action: {
                     saveSettings()
                 }) {
@@ -228,6 +230,7 @@ struct SettingsView: View {
         ]
         UserDefaults.standard.set(colorDict, forKey: "colorDict")
         UserDefaults.standard.set(blockNames, forKey: "blockNames")
+        // Super secret stuff. If you are stuck and not able to find any of the secrets in this app, contact me at skuwamoto25@basychoolsf.org and I can give you a few pointers.
         for (_, customName) in blockNames {
             let hashed = SHA256.hash(data: Data(customName.utf8))
             let hashedString = hashed.compactMap { String(format: "%02x", $0) }.joined()

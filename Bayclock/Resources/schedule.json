@@ -1,379 +1,140 @@
-[
-    {
-        "day": "Monday",
-        "blocks": [
-            {
-                "name": "Morning Meeting",
-                "start": {
-                    "hour": 8,
-                    "minute": 30
-                },
-                "end": {
-                    "hour": 8,
-                    "minute": 50
-                }
-            },
-            {
-                "name": "A",
-                "start": {
-                    "hour": 8,
-                    "minute": 55
-                },
-                "end": {
-                    "hour": 10,
-                    "minute": 10
-                }
-            },
-            {
-                "name": "B",
-                "start": {
-                    "hour": 10,
-                    "minute": 15
-                },
-                "end": {
-                    "hour": 11,
-                    "minute": 30
-                }
-            },
-            {
-                "name": "Lunch",
-                "start": {
-                    "hour": 11,
-                    "minute": 30
-                },
-                "end": {
-                    "hour": 12,
-                    "minute": 30
-                }
-            },
-            {
-                "name": "C",
-                "start": {
-                    "hour": 12,
-                    "minute": 30
-                },
-                "end": {
-                    "hour": 13,
-                    "minute": 45
-                }
-            },
-            {
-                "name": "D",
-                "start": {
-                    "hour": 13,
-                    "minute": 50
-                },
-                "end": {
-                    "hour": 15,
-                    "minute": 5
-                }
-            },
-            {
-                "name": "Tutorial",
-                "start": {
-                    "hour": 15,
-                    "minute": 5
-                },
-                "end": {
-                    "hour": 15,
-                    "minute": 35
-                }
-            }
+{
+    "Monday": {
+        "Morning Meeting": [
+            [8, 30],
+            [8, 50]
+        ],
+        "A": [
+            [8, 55],
+            [10, 10]
+        ],
+        "B": [
+            [10, 15],
+            [11, 30]
+        ],
+        "Lunch": [
+            [11, 30],
+            [12, 30]
+        ],
+        "C": [
+            [12, 30],
+            [13, 45]
+        ],
+        "D": [
+            [13, 50],
+            [15, 5]
+        ],
+        "Tutorial": [
+            [15, 5],
+            [15, 35]
         ]
     },
-    {
-        "day": "Tuesday",
-        "blocks": [
-            {
-                "name": "Group Advisory/1-on-1s",
-                "start": {
-                    "hour": 8,
-                    "minute": 30
-                },
-                "end": {
-                    "hour": 8,
-                    "minute": 50
-                }
-            },
-            {
-                "name": "E",
-                "start": {
-                    "hour": 8,
-                    "minute": 55
-                },
-                "end": {
-                    "hour": 10,
-                    "minute": 10
-                }
-            },
-            {
-                "name": "F",
-                "start": {
-                    "hour": 10,
-                    "minute": 15
-                },
-                "end": {
-                    "hour": 11,
-                    "minute": 30
-                }
-            },
-            {
-                "name": "Lunch",
-                "start": {
-                    "hour": 11,
-                    "minute": 30
-                },
-                "end": {
-                    "hour": 12,
-                    "minute": 30
-                }
-            },
-            {
-                "name": "A",
-                "start": {
-                    "hour": 12,
-                    "minute": 30
-                },
-                "end": {
-                    "hour": 13,
-                    "minute": 45
-                }
-            },
-            {
-                "name": "B",
-                "start": {
-                    "hour": 13,
-                    "minute": 50
-                },
-                "end": {
-                    "hour": 15,
-                    "minute": 5
-                }
-            },
-            {
-                "name": "Tutorial",
-                "start": {
-                    "hour": 15,
-                    "minute": 5
-                },
-                "end": {
-                    "hour": 15,
-                    "minute": 35
-                }
-            }
+    "Tuesday": {
+        "Group Advisory/1-on-1s": [
+            [8, 30],
+            [8, 50]
+        ],
+        "E": [
+            [8, 55],
+            [10, 10]
+        ],
+        "F": [
+            [10, 15],
+            [11, 30]
+        ],
+        "Lunch": [
+            [11, 30],
+            [12, 30]
+        ],
+        "A": [
+            [12, 30],
+            [13, 45]
+        ],
+        "B": [
+            [13, 50],
+            [15, 5]
+        ],
+        "Tutorial": [
+            [15, 5],
+            [15, 35]
         ]
     },
-    {
-        "day": "Wednesday",
-        "blocks": [
-            {
-                "name": "Morning Meeting",
-                "start": {
-                    "hour": 8,
-                    "minute": 30
-                },
-                "end": {
-                    "hour": 8,
-                    "minute": 50
-                }
-            },
-            {
-                "name": "C",
-                "start": {
-                    "hour": 8,
-                    "minute": 55
-                },
-                "end": {
-                    "hour": 10,
-                    "minute": 10
-                }
-            },
-            {
-                "name": "D",
-                "start": {
-                    "hour": 10,
-                    "minute": 15
-                },
-                "end": {
-                    "hour": 11,
-                    "minute": 30
-                }
-            },
-            {
-                "name": "Lunch",
-                "start": {
-                    "hour": 11,
-                    "minute": 30
-                },
-                "end": {
-                    "hour": 12,
-                    "minute": 30
-                }
-            },
-            {
-                "name": "E",
-                "start": {
-                    "hour": 12,
-                    "minute": 30
-                },
-                "end": {
-                    "hour": 13,
-                    "minute": 45
-                }
-            },
-            {
-                "name": "F",
-                "start": {
-                    "hour": 13,
-                    "minute": 50
-                },
-                "end": {
-                    "hour": 15,
-                    "minute": 5
-                }
-            },
-            {
-                "name": "Tutorial",
-                "start": {
-                    "hour": 15,
-                    "minute": 5
-                },
-                "end": {
-                    "hour": 15,
-                    "minute": 35
-                }
-            }
+    "Wednesday": {
+        "Morning Meeting": [
+            [8, 30],
+            [8, 50]
+        ],
+        "C": [
+            [8, 55],
+            [10, 10]
+        ],
+        "D": [
+            [10, 15],
+            [11, 30]
+        ],
+        "Lunch": [
+            [11, 30],
+            [12, 30]
+        ],
+        "E": [
+            [12, 30],
+            [13, 45]
+        ],
+        "F": [
+            [13, 50],
+            [15, 5]
+        ],
+        "Tutorial": [
+            [15, 5],
+            [15, 35]
         ]
     },
-    {
-        "day": "Thursday",
-        "blocks": [
-            {
-                "name": "Group Advisory/1-on-1s",
-                "start": {
-                    "hour": 8,
-                    "minute": 30
-                },
-                "end": {
-                    "hour": 8,
-                    "minute": 50
-                }
-            },
-            {
-                "name": "B",
-                "start": {
-                    "hour": 8,
-                    "minute": 55
-                },
-                "end": {
-                    "hour": 10,
-                    "minute": 25
-                }
-            },
-            {
-                "name": "A",
-                "start": {
-                    "hour": 10,
-                    "minute": 35
-                },
-                "end": {
-                    "hour": 12,
-                    "minute": 5
-                }
-            },
-            {
-                "name": "Lunch",
-                "start": {
-                    "hour": 12,
-                    "minute": 5
-                },
-                "end": {
-                    "hour": 12,
-                    "minute": 55
-                }
-            },
-            {
-                "name": "C",
-                "start": {
-                    "hour": 12,
-                    "minute": 55
-                },
-                "end": {
-                    "hour": 14,
-                    "minute": 25
-                }
-            },
-            {
-                "name": "Tutorial",
-                "start": {
-                    "hour": 14,
-                    "minute": 25
-                },
-                "end": {
-                    "hour": 14,
-                    "minute": 55
-                }
-            }
+    "Thursday": {
+        "Group Advisory/1-on-1s": [
+            [8, 30],
+            [8, 50]
+        ],
+        "B": [
+            [8, 55],
+            [10, 25]
+        ],
+        "A": [
+            [10, 35],
+            [12, 5]
+        ],
+        "Lunch": [
+            [12, 5],
+            [12, 55]
+        ],
+        "C": [
+            [12, 55],
+            [14, 25]
+        ],
+        "Tutorial": [
+            [14, 25],
+            [14, 55]
         ]
     },
-    {
-        "day": "Friday",
-        "blocks": [
-            {
-                "name": "Morning Meeting",
-                "start": {
-                    "hour": 8,
-                    "minute": 30
-                },
-                "end": {
-                    "hour": 8,
-                    "minute": 50
-                }
-            },
-            {
-                "name": "D",
-                "start": {
-                    "hour": 8,
-                    "minute": 55
-                },
-                "end": {
-                    "hour": 10,
-                    "minute": 25
-                }
-            },
-            {
-                "name": "F",
-                "start": {
-                    "hour": 10,
-                    "minute": 35
-                },
-                "end": {
-                    "hour": 12,
-                    "minute": 5
-                }
-            },
-            {
-                "name": "Lunch",
-                "start": {
-                    "hour": 12,
-                    "minute": 5
-                },
-                "end": {
-                    "hour": 12,
-                    "minute": 55
-                }
-            },
-            {
-                "name": "E",
-                "start": {
-                    "hour": 12,
-                    "minute": 55
-                },
-                "end": {
-                    "hour": 14,
-                    "minute": 25
-                }
-            }
+    "Friday": {
+        "Morning Meeting": [
+            [8, 30],
+            [8, 50]
+        ],
+        "D": [
+            [8, 55],
+            [10, 25]
+        ],
+        "F": [
+            [10, 35],
+            [12, 5]
+        ],
+        "Lunch": [
+            [12, 5],
+            [12, 55]
+        ],
+        "E": [
+            [12, 55],
+            [14, 25]
         ]
     }
-]
+}

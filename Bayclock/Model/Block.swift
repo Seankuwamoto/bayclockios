@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+// Adds an extention for the Double type that allows me to truncate it.
 extension Double {
     func truncate(places : Int)-> Double {
         return Double(floor(pow(10.0, Double(places)) * self)/pow(10.0, Double(places)))
@@ -28,9 +29,10 @@ struct Block: Hashable, Codable {
     
     // Gets the current fraction that a block is completed. For example if a block started at 1:00 and ended at 2:00 and the current time was 1:50, the fraction complete would be 5/6
     func fractionComplete(time: TimeStruct) -> CGFloat {
-        
+        // Finds how long the block is
         let duration = timeToSeconds(hour: end.hour, minute: end.minute, second: 0) - timeToSeconds(hour: start.hour, minute: start.minute, second: 0)
         let returnValue = CGFloat(timeToSeconds(hour: time.hour, minute: time.minute, second: time.second) - timeToSeconds(hour: start.hour, minute: start.minute, second: 0))/CGFloat(duration)
+        // Makes sure that the maximum % that a block can be is 1 and the minimum is 1
         if (returnValue > 1) {
             return 1.0
         }
@@ -43,7 +45,9 @@ struct Block: Hashable, Codable {
     }
 }
 
+// Gets the user set name of a block from its original name.
 func getName(name: String) -> String {
+    // The default dictonrary of names before the user changes any of them.
     let blockNames: [String: String] = [
         "Morning Meeting": "Morning Meeting",
         "Group Advisory/1-on-1s": "Group Advisory/1-on-1s",
@@ -92,7 +96,9 @@ func colorToData(_ c: UIColor) throws -> Data {
 // Gets the color of a block based on its name.
 func getColor(name: String) -> Color {
     
-    // Set all defaults
+
+    
+    //These are the old default colors. Still deciding on which ones to use.
 //    let colorDict: [String: Data?] = [
 //        "Morning Meeting":        try? colorToData(UIColor(Color(red: 131/255.0, green: 89/255.0, blue: 149/255.0))),
 //        "Group Advisory/1-on-1s": try? colorToData(UIColor(Color(red: 131/255.0, green: 89/255.0, blue: 149/255.0))),
@@ -105,6 +111,7 @@ func getColor(name: String) -> Color {
 //        "Lunch":                  try? colorToData(UIColor(Color(red: 82/255.0, green: 167/255.0, blue: 134/255.0))),
 //        "Tutorial":               try? colorToData(UIColor(Color(red: 230/255.0, green: 217/255.0, blue: 67/255.0)))
 //    ]
+    // Set all default colors
     let colorDict: [String: Data?] = [
             "Morning Meeting":        try? colorToData(UIColor(Color(red: 90/255.0, green: 164/255.0, blue: 217/255.0))),
             "Group Advisory/1-on-1s": try? colorToData(UIColor(Color(red: 90/255.0, green: 164/255.0, blue: 217/255.0))),
@@ -172,6 +179,7 @@ func getClass(schedule: [Day], time: TimeStruct) -> String {
     return returnValue
 }
 
+// Returns the time left in the current block.
 func timeLeft(schedule: [Day], time: TimeStruct) -> String {
     let currentSchedule = schedule[time.weekday - 2].blocks
     let numBlocks = currentSchedule.count

@@ -8,7 +8,10 @@
 import SwiftUI
 import Vision
 
+// Just a picture of the menu.
 struct MenuView: View {
+    
+    // This
 //    guard let cgImage = UIImage(named: "menu")?.cgImage else { return }
 //
 //    let requestHandler = VNImageRequestHandler(cgImage: CGImage)

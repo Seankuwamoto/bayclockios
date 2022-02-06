@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// Developer view that allows manually setting the time for bug fixing purposes. Currently disabled.
 struct DeveloperView: View {
 //    // toggle for "manual time" which means that time is set by the user instead of retrieved from the current date
 //    @AppStorage("manualTime") var manualTime = false

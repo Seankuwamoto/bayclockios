@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// A test version of a block for design/bug fixing purpouses.
 struct TestBar: View {
     var rectLength : CGFloat = UIScreen.main.bounds.size.width - 40
     @State private var rectWidth = UIScreen.main.bounds.size.height/6

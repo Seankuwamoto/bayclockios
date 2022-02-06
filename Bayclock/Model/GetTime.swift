@@ -28,19 +28,21 @@ func getTime() -> TimeStruct {
     let year = calendar.component(.year, from: date)
     let month = calendar.component(.month, from: date)
     let day = calendar.component(.day, from: date)
-    let weekday = calendar.component(.weekday, from: date) - 1
-    let hour = calendar.component(.hour, from: date) - 2
+    let weekday = calendar.component(.weekday, from: date)
+    let hour = calendar.component(.hour, from: date)
     let minute = calendar.component(.minute, from: date)
     let second = calendar.component(.second, from: date)
     
     return TimeStruct(year: year, month: month, day: day, weekday: weekday, hour: hour, minute: minute, second: second)
 }
 
-// Returns a value in the form of HH:MM:SS if hasSeconds is true and HH:MM if hasSeconds is false.
-func dateToString(weekday: Int, month: Int, day: Int) -> String{
+// Returns a date in the form of a string. Example: "Tuesday March 22nd"
+func dateToString(weekday: Int, month: Int, day: Int) -> String {
     var weekdayString: String
     var monthString: String
     var dayString: String
+    
+    // Gets the weekday name
     if (weekday == 1) {
         weekdayString = "Sunday"
     }
@@ -63,6 +65,7 @@ func dateToString(weekday: Int, month: Int, day: Int) -> String{
         weekdayString = "Saturday"
     }
     
+    // Gets the Month name
     if (month == 1) {
         monthString = "January"
     }
@@ -100,6 +103,7 @@ func dateToString(weekday: Int, month: Int, day: Int) -> String{
         monthString = "December"
     }
     
+    // Gets the suffix for the current day of the month
     if (day == 1 || day == 21 || day == 31) {
         dayString = "\(day)st"
     }
@@ -115,6 +119,8 @@ func dateToString(weekday: Int, month: Int, day: Int) -> String{
     
     return "\(weekdayString) \(monthString) \(dayString)"
 }
+
+// Returns a time in the form of "HH:MM:SS" if hasSeconds is true and "HH:MM" if hasSeconds is false. Outputted time is not in military format (0:00 to 23:59), it is in the format of (12:00AM to 11:59PM). The input time is in military time.
 func timeToString(hour: Int, minute: Int, second: Int, hasSeconds: Bool) -> String {
     var stringTime = ""
     if (hasSeconds) {
@@ -145,10 +151,12 @@ func timeToString(hour: Int, minute: Int, second: Int, hasSeconds: Bool) -> Stri
     return stringTime
 }
 
+// Turns a time of day into completely seconds. Useful for comparing times.
 func timeToSeconds(hour: Int, minute: Int, second: Int) -> Int {
     return hour * 60 * 60 + minute * 60 + second
 }
 
+// Turns Lucas' inconsistant date format into a nomal one.
 func normalizeDate(date: String) -> String {
     let year = date.split(separator: "/")[0]
     let month = String(format: "%02d", Int(date.split(separator: "/")[1]) ?? 0)

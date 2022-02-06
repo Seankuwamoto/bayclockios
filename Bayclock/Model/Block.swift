@@ -71,11 +71,6 @@ func getName(name: String) -> String {
     else if (UserDefaults.standard.dictionary(forKey: "blockNames")![name] as! String == "") {
         return blockNames[name]!
     }
-    
-    else if (UserDefaults.standard.dictionary(forKey: "blockNames")![name] as! String == "placeholder") {
-        Secret.isSecretActive = true
-        return UserDefaults.standard.dictionary(forKey: "blockNames")![name] as! String
-    }
     // Return the name they typed.
     else {
         return UserDefaults.standard.dictionary(forKey: "blockNames")![name] as! String
@@ -120,7 +115,8 @@ func getColor(name: String) -> Color {
             "E":                      try? colorToData(UIColor(Color(red: 90/255.0, green: 164/255.0, blue: 217/255.0))),
             "F":                      try? colorToData(UIColor(Color(red: 90/255.0, green: 164/255.0, blue: 217/255.0))),
             "Lunch":                  try? colorToData(UIColor(Color(red: 90/255.0, green: 164/255.0, blue: 217/255.0))),
-            "Tutorial":               try? colorToData(UIColor(Color(red: 90/255.0, green: 164/255.0, blue: 217/255.0)))
+            "Tutorial":               try? colorToData(UIColor(Color(red: 90/255.0, green: 164/255.0, blue: 217/255.0))),
+            "Background":             try? colorToData(UIColor(Color(red: 255/255.0, green: 255/255.0, blue: 255/255.0)))
         ]
 
     // Set colors to defaults if they do not exist

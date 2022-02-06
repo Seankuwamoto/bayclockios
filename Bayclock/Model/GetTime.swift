@@ -28,8 +28,8 @@ func getTime() -> TimeStruct {
     let year = calendar.component(.year, from: date)
     let month = calendar.component(.month, from: date)
     let day = calendar.component(.day, from: date)
-    let weekday = calendar.component(.weekday, from: date)
-    let hour = calendar.component(.hour, from: date)
+    let weekday = calendar.component(.weekday, from: date) - 1
+    let hour = calendar.component(.hour, from: date) - 2
     let minute = calendar.component(.minute, from: date)
     let second = calendar.component(.second, from: date)
     

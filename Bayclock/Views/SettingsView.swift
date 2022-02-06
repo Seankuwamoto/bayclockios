@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UIKit
+import CryptoKit
 
 extension View {
     func hideKeyboard() {
@@ -26,6 +27,7 @@ struct SettingsView: View {
     @State public var FColor = getColor(name: "F")
     @State public var LunchColor = getColor(name: "Lunch")
     @State public var TutorialColor = getColor(name: "Tutorial")
+    @State public var BackgroundColor = getColor(name: "Background")
     @State public var MMName = getName(name: "Morning Meeting")
     @State public var GAName = getName(name: "Group Advisory/1-on-1s")
     @State public var AName = getName(name: "A")
@@ -38,6 +40,8 @@ struct SettingsView: View {
     @State public var TutorialName = getName(name: "Tutorial")
     @AppStorage("compressedMode") var compressedMode = false
     @AppStorage("hideCompleted") var hideCompleted = false
+    @AppStorage("showPercentages") var showPercentages = false
+    @AppStorage("isSecretActive") var isSecretActive = false
     
 
     var body: some View {
@@ -65,6 +69,11 @@ struct SettingsView: View {
                 }
                 Toggle(isOn: $hideCompleted) {
                     Text("Hide completed")
+                }
+                if (UserDefaults.standard.bool(forKey: "secretSettingsActive")) {
+                    Toggle(isOn: $showPercentages) {
+                        Text("Show percentages")
+                    }
                 }
                 // Color pickers for each of the class colors.
                 Group {
@@ -149,7 +158,14 @@ struct SettingsView: View {
                             .labelsHidden()     
                     }
                 }
-                
+                if (UserDefaults.standard.bool(forKey: "secretSettingsActive")) {
+                    HStack {
+                        Text("Background color")
+                        Spacer()
+                        ColorPicker("", selection: $BackgroundColor, supportsOpacity: false)
+                            .labelsHidden()
+                    }
+                }
                 // Button to reset all colors to their defaults
                 Button(action: {
                     MMColor = Color(red: 131/255.0, green: 89/255.0, blue: 149/255.0)
@@ -162,6 +178,7 @@ struct SettingsView: View {
                     FColor = Color(red: 218/255.0, green: 82/255.0, blue: 101/255.0)
                     LunchColor = Color(red: 82/255.0, green: 167/255.0, blue: 134/255.0)
                     TutorialColor = Color(red: 230/255.0, green: 217/255.0, blue: 67/255.0)
+                    BackgroundColor = Color(red: 255/255.0, green: 255/255.0, blue: 255/255.0)
                     saveSettings()
                 }) {
                     ZStack {
@@ -194,7 +211,8 @@ struct SettingsView: View {
             "E":                      try? colorToData(UIColor(EColor)),
             "F":                      try? colorToData(UIColor(FColor)),
             "Lunch":                  try? colorToData(UIColor(LunchColor)),
-            "Tutorial":               try? colorToData(UIColor(TutorialColor))
+            "Tutorial":               try? colorToData(UIColor(TutorialColor)),
+            "Background":             try? colorToData(UIColor(BackgroundColor))
         ]
         let blockNames: [String: String] = [
             "Morning Meeting":          MMName,
@@ -210,6 +228,16 @@ struct SettingsView: View {
         ]
         UserDefaults.standard.set(colorDict, forKey: "colorDict")
         UserDefaults.standard.set(blockNames, forKey: "blockNames")
+        for (_, customName) in blockNames {
+            let hashed = SHA256.hash(data: Data(customName.utf8))
+            let hashedString = hashed.compactMap { String(format: "%02x", $0) }.joined()
+            if (hashedString == "dfa24fe04d4fec9585c452754e2aa9f4036a0088fcf148b4c968529014fe92f9") {
+                isSecretActive = true
+                return
+            }
+        }
+        isSecretActive = false
+        
     }
 }
 

@@ -15,55 +15,59 @@ struct BlockList: View {
     @State private var time = getTime()
     
     var body: some View {
-        ScrollView {
-            VStack() {
-                if (whatBreakIsToday(breaks: modelData.breaks) != nil){
-                    Text("\(timeToString(hour: time.hour, minute: time.minute, second: time.second, hasSeconds: false))")
-                        .font(.largeTitle)
-                        .padding(.top, UIScreen.main.bounds.size.height/2 - 80)
-                    Text(dateToString(weekday: time.weekday, month: time.month, day: time.day))
-                    Text(whatBreakIsToday(breaks: modelData.breaks)!)
-                }
-                else if (time.weekday > 1 && time.weekday < 7) {
-                    if (UserDefaults.standard.bool(forKey: "compressedMode") ==  true) {
+        ZStack {
+            getColor(name: "Background")
+                .ignoresSafeArea()
+            ScrollView {
+                VStack() {
+                    if (whatBreakIsToday(breaks: modelData.breaks) != nil){
+                        Text("\(timeToString(hour: time.hour, minute: time.minute, second: time.second, hasSeconds: false))")
+                            .font(.largeTitle)
+                            .padding(.top, UIScreen.main.bounds.size.height/2 - 80)
+                        Text(dateToString(weekday: time.weekday, month: time.month, day: time.day))
+                        Text(whatBreakIsToday(breaks: modelData.breaks)!)
+                    }
+                    else if (time.weekday > 1 && time.weekday < 7) {
+                        if (UserDefaults.standard.bool(forKey: "compressedMode") ==  true) {
+                            
+                            Text("\(timeToString(hour: time.hour, minute: time.minute, second: time.second, hasSeconds: false))")
+                                .font(.title)
+                                .padding(.top, 10.0)
+                            Text(dateToString(weekday: time.weekday, month: time.month, day: time.day))
+                                .padding(.bottom, 6.0)
+                        }
+                        else {
+                            Text("\(timeToString(hour: time.hour, minute: time.minute, second: time.second, hasSeconds: false))")
+                                .font(.title)
+                                .padding(.top, 50.0)
+                            Text(dateToString(weekday: time.weekday, month: time.month, day: time.day))
+                                .padding(.bottom, 50.0)
+                        }
+                        Text(getClass(schedule: modelData.schedule, time: time))
+                        Text(timeLeft(schedule: modelData.schedule, time: time))
+                        if (UserDefaults.standard.bool(forKey: "compressedMode") ==  true) {
+                            ForEach(modelData.schedule[time.weekday - 2].blocks, id: \.self) { Block in
+                                BlockRow(block: Block, compressedIsOn: true, time: time)
+                                    .padding(.top, barSpacing)
+                            }
+                        }
+                        else {
+                            ForEach(modelData.schedule[time.weekday - 2].blocks, id: \.self) { Block in
+                                BlockRow(block: Block, compressedIsOn: false, time: time)
+                                    .padding(.top, barSpacing)
+                            }
+                        }
                         
-                        Text("\(timeToString(hour: time.hour, minute: time.minute, second: time.second, hasSeconds: false))")
-                            .font(.title)
-                            .padding(.top, 10.0)
-                        Text(dateToString(weekday: time.weekday, month: time.month, day: time.day))
-                            .padding(.bottom, 6.0)
                     }
                     else {
                         Text("\(timeToString(hour: time.hour, minute: time.minute, second: time.second, hasSeconds: false))")
-                            .font(.title)
-                            .padding(.top, 50.0)
+                            .font(.largeTitle)
+                            .padding(.top, UIScreen.main.bounds.size.height/2 - 80)
                         Text(dateToString(weekday: time.weekday, month: time.month, day: time.day))
-                            .padding(.bottom, 50.0)
+                        Text("Today is a weekend!")
                     }
-                    Text(getClass(schedule: modelData.schedule, time: time))
-                    Text(timeLeft(schedule: modelData.schedule, time: time))
-                    if (UserDefaults.standard.bool(forKey: "compressedMode") ==  true) {
-                        ForEach(modelData.schedule[time.weekday - 2].blocks, id: \.self) { Block in
-                            BlockRow(block: Block, compressedIsOn: true, time: time)
-                                .padding(.top, barSpacing)
-                        }
-                    }
-                    else {
-                        ForEach(modelData.schedule[time.weekday - 2].blocks, id: \.self) { Block in
-                            BlockRow(block: Block, compressedIsOn: false, time: time)
-                                .padding(.top, barSpacing)
-                        }
-                    }
-                    
+                    Spacer()
                 }
-                else {
-                    Text("\(timeToString(hour: time.hour, minute: time.minute, second: time.second, hasSeconds: false))")
-                        .font(.largeTitle)
-                        .padding(.top, UIScreen.main.bounds.size.height/2 - 80)
-                    Text(dateToString(weekday: time.weekday, month: time.month, day: time.day))
-                    Text("Today is a weekend!")
-                }
-                Spacer()
             }
         }
         .onReceive(timer) { _ in

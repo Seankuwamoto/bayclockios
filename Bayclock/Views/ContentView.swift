@@ -9,9 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var modelData: ModelData
+    @State private var isSecretActive = UserDefaults.standard.bool(forKey: "isSecretActive")
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         // the main view of the app.
-        TabView{
+        TabView {
+            if(isSecretActive) {
+                SecretView()
+                    .tabItem {
+                        Image(systemName: "lock")
+                        Text("Secret")
+                    }
+            }
             HomeView()
                 .environmentObject(ModelData())
                 .tabItem {
@@ -34,18 +43,14 @@ struct ContentView: View {
                     Image(systemName: "gearshape")
                     Text("Settings")
                 }
-            if(Secret.isSecretActive) {
-                SecretView()
-                    .tabItem {
-                        Image(systemName: "lock")
-                        Text("")
-                    }
-            }
 //            DeveloperView()
 //                .tabItem {
 //                    Image(systemName: "lock.iphone")
 //                    Text("Developer")
 //                }
+        }
+        .onReceive(timer) { _ in
+            isSecretActive = UserDefaults.standard.bool(forKey: "isSecretActive")
         }
     }
 }

@@ -23,7 +23,6 @@
 		9F834BE127AB98F400C1B45B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9F834BDF27AB98F400C1B45B /* LICENSE */; };
 		9F834BE227AB98F400C1B45B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9F834BE027AB98F400C1B45B /* README.md */; };
 		9F834BE427ACDC4800C1B45B /* SecretView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F834BE327ACDC4800C1B45B /* SecretView.swift */; };
-		9F834BE627ACE0B900C1B45B /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F834BE527ACE0B900C1B45B /* Secret.swift */; };
 		9FB82A91275045B800720CA4 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82A90275045B800720CA4 /* ModelData.swift */; };
 		9FB82A9327504E4000720CA4 /* schedule.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FB82A9227504E4000720CA4 /* schedule.json */; };
 		9FB82A962750518E00720CA4 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82A952750518E00720CA4 /* Day.swift */; };
@@ -73,7 +72,6 @@
 		9F834BDF27AB98F400C1B45B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		9F834BE027AB98F400C1B45B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		9F834BE327ACDC4800C1B45B /* SecretView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretView.swift; sourceTree = "<group>"; };
-		9F834BE527ACE0B900C1B45B /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		9FB82A90275045B800720CA4 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		9FB82A9227504E4000720CA4 /* schedule.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schedule.json; sourceTree = "<group>"; };
 		9FB82A952750518E00720CA4 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 				9FB82A952750518E00720CA4 /* Day.swift */,
 				9FB82A992750553E00720CA4 /* Block.swift */,
 				9FB82AA52751A43200720CA4 /* GetTime.swift */,
-				9F834BE527ACE0B900C1B45B /* Secret.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -349,7 +346,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FB82AA62751A43200720CA4 /* GetTime.swift in Sources */,
-				9F834BE627ACE0B900C1B45B /* Secret.swift in Sources */,
 				9FB82A91275045B800720CA4 /* ModelData.swift in Sources */,
 				9F834BD427A369D800C1B45B /* HomeView.swift in Sources */,
 				9FB82A9E27509C0400720CA4 /* BlockList.swift in Sources */,

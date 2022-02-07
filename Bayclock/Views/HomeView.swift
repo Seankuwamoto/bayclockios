@@ -56,7 +56,8 @@ struct HomeView: View {
                         }
                     }
                     // Prints today's lunch using Swift's Vision AI module to read the menu jpg. Currently is just a placeholder.
-                    Text("Today's lunch: " + "Placeholder")
+                    // Never mind, the AI was to bad at reading the menu.
+                    //Text("Today's lunch: " + "Placeholder")
                 }
                 
                 Spacer()

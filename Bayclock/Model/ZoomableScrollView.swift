@@ -10,6 +10,7 @@ import SwiftUI
 
 
 // I basically just copy and pasted this code from stackoverflow. Here is where I got it from: https://stackoverflow.com/questions/58341820/isnt-there-an-easy-way-to-pinch-to-zoom-in-an-image-in-swiftui
+// It allows me to make a scroll view (pannable view) that can also be zoomed in. Used for the menu image.
 struct ZoomableScrollView<Content: View>: UIViewRepresentable {
   private var content: Content
 

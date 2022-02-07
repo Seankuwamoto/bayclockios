@@ -40,11 +40,14 @@ struct SettingsView: View {
     @State public var FName = getName(name: "F")
     @State public var LunchName = getName(name: "Lunch")
     @State public var TutorialName = getName(name: "Tutorial")
+    @State public var secretSettingsActive = UserDefaults.standard.bool(forKey: "secretSettingsActive")
     @AppStorage("compressedMode") var compressedMode = false
     @AppStorage("hideCompleted") var hideCompleted = false
     @AppStorage("showPercentages") var showPercentages = false
     @AppStorage("isSecretActive") var isSecretActive = false
     
+    // Reloads the view every second.
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     // Main display
     var body: some View {
         VStack {
@@ -160,7 +163,7 @@ struct SettingsView: View {
                             .labelsHidden()     
                     }
                 }
-                if (UserDefaults.standard.bool(forKey: "secretSettingsActive")) {
+                if (secretSettingsActive) {
                     HStack {
                         Text("Background color")
                         Spacer()
@@ -194,10 +197,10 @@ struct SettingsView: View {
                 }
             }
             
-            
-            
         }
-        
+        .onReceive(timer) { _ in
+            secretSettingsActive = UserDefaults.standard.bool(forKey: "secretSettingsActive")
+        }
     }
     
     

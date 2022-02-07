@@ -90,7 +90,7 @@ struct BlockList: View {
                     Spacer()
                 } // End VStack (vertical stack of stuff)
             } // End ScrollView (Scrollable area)
-        } // End ZStack)
+        } // End ZStack
         // Updates the time every second
         .onReceive(timer) { _ in
             time = getTime()

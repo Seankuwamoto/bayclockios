@@ -30,7 +30,13 @@ struct SecretView: View {
                         let hashed = SHA256.hash(data: Data(input.utf8))
                         let hashedString = hashed.compactMap { String(format: "%02x", $0) }.joined()
                         if (hashedString == "615e82366bd43f0b946d175d40c1890c56f6064bf980c9fa4ce7be673aab4da8") {
-                            secretSettingsActive.toggle()
+                            if (UserDefaults.standard.bool(forKey: "secretSettingsActive") == true) {
+                                UserDefaults.standard.set(false, forKey: "secretSettingsActive")
+                            }
+                            else {
+                                UserDefaults.standard.set(true, forKey: "secretSettingsActive")
+                            }
+                            
                             displayMessage = "s"
                         }
                         // Hint: try putting in Baybrave as the password
@@ -47,14 +53,14 @@ struct SecretView: View {
         }
         else if (displayMessage == "s") {
             if (secretSettingsActive) {
-                Text("Secret settings now visable")
+                Text(decrypt(message: "Vhfuhw#vhwwlqjv#qrz#ylvdeoh"))
                     .onDisappear {
                         input = ""
                         displayMessage = "enterPassword"
                     }
             }
             else {
-                Text("Secret settings no longer visable")
+                Text(decrypt(message: "Vhfuhw#vhwwlqjv#qr#orqjhu#ylvdeoh"))
                     .onDisappear {
                         input = ""
                         displayMessage = "enterPassword"

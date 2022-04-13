@@ -52,7 +52,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9F2CFB7128065DC400916D9A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		9F2CFB6128065DC100916D9A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		9F2CFB6328065DC100916D9A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		9F3A54222750413E00781A91 /* Bayclock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bayclock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F3A54252750413E00781A91 /* BayclockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayclockApp.swift; sourceTree = "<group>"; };
 		9F3A54272750413E00781A91 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,12 +124,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F2CFB6028065DC100916D9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F2CFB6128065DC100916D9A /* WidgetKit.framework */,
+				9F2CFB6328065DC100916D9A /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9F3A54192750413E00781A91 = {
 			isa = PBXGroup;
 			children = (
 				9F3A54242750413E00781A91 /* Bayclock */,
 				9F3A54352750414000781A91 /* BayclockTests */,
 				9F3A543F2750414000781A91 /* BayclockUITests */,
+				9F2CFB6028065DC100916D9A /* Frameworks */,
 				9F3A54232750413E00781A91 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -218,6 +243,7 @@
 				9F3A541E2750413E00781A91 /* Sources */,
 				9F3A541F2750413E00781A91 /* Frameworks */,
 				9F3A54202750413E00781A91 /* Resources */,
+				9F2CFB7128065DC400916D9A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -271,7 +297,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1310;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					9F3A54212750413E00781A91 = {

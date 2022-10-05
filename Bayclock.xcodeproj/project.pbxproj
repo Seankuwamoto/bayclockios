@@ -33,6 +33,13 @@
 		9FB82AAB2752B5EE00720CA4 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82AAA2752B5EE00720CA4 /* MenuView.swift */; };
 		9FB82AAD2752B83E00720CA4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82AAC2752B83E00720CA4 /* SettingsView.swift */; };
 		9FF07535275D3D6C0070FA70 /* TestBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF07534275D3D6B0070FA70 /* TestBar.swift */; };
+		9FF134FD28E8BDFD00885E2F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2CFB6128065DC100916D9A /* WidgetKit.framework */; };
+		9FF134FE28E8BDFD00885E2F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2CFB6328065DC100916D9A /* SwiftUI.framework */; };
+		9FF1350128E8BDFD00885E2F /* BayclockWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF1350028E8BDFD00885E2F /* BayclockWidget.swift */; };
+		9FF1350328E8BDFE00885E2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF1350228E8BDFE00885E2F /* Assets.xcassets */; };
+		9FF1350728E8BDFE00885E2F /* BayclockWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9FF134FC28E8BDFD00885E2F /* BayclockWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9FF1350B28E8C4DA00885E2F /* GetTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB82AA52751A43200720CA4 /* GetTime.swift */; };
+		9FF1350F28E9324300885E2F /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF1350E28E9324300885E2F /* Arc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,17 +57,35 @@
 			remoteGlobalIDString = 9F3A54212750413E00781A91;
 			remoteInfo = Bayclock;
 		};
+		9FF1350528E8BDFE00885E2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F3A541A2750413E00781A91 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FF134FB28E8BDFD00885E2F;
+			remoteInfo = BayclockWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9F2CFB7128065DC400916D9A /* Embed App Extensions */ = {
+		9F2CFB7128065DC400916D9A /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				9FF1350728E8BDFE00885E2F /* BayclockWidgetExtension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FDAB7C828E8B84B004CDD28 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -96,7 +121,13 @@
 		9FB82AA52751A43200720CA4 /* GetTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTime.swift; sourceTree = "<group>"; };
 		9FB82AAA2752B5EE00720CA4 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		9FB82AAC2752B83E00720CA4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9FDAB7A828E8B624004CDD28 /* Bayclock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bayclock.entitlements; sourceTree = "<group>"; };
 		9FF07534275D3D6B0070FA70 /* TestBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBar.swift; sourceTree = "<group>"; };
+		9FF134FC28E8BDFD00885E2F /* BayclockWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BayclockWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FF1350028E8BDFD00885E2F /* BayclockWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayclockWidget.swift; sourceTree = "<group>"; };
+		9FF1350228E8BDFE00885E2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FF1350428E8BDFE00885E2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FF1350E28E9324300885E2F /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +152,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9FF134F928E8BDFD00885E2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FF134FE28E8BDFD00885E2F /* SwiftUI.framework in Frameworks */,
+				9FF134FD28E8BDFD00885E2F /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -139,6 +179,7 @@
 				9F3A54242750413E00781A91 /* Bayclock */,
 				9F3A54352750414000781A91 /* BayclockTests */,
 				9F3A543F2750414000781A91 /* BayclockUITests */,
+				9FF134FF28E8BDFD00885E2F /* BayclockWidget */,
 				9F2CFB6028065DC100916D9A /* Frameworks */,
 				9F3A54232750413E00781A91 /* Products */,
 			);
@@ -150,6 +191,7 @@
 				9F3A54222750413E00781A91 /* Bayclock.app */,
 				9F3A54322750414000781A91 /* BayclockTests.xctest */,
 				9F3A543C2750414000781A91 /* BayclockUITests.xctest */,
+				9FF134FC28E8BDFD00885E2F /* BayclockWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +199,7 @@
 		9F3A54242750413E00781A91 /* Bayclock */ = {
 			isa = PBXGroup;
 			children = (
+				9FDAB7A828E8B624004CDD28 /* Bayclock.entitlements */,
 				9F834BDF27AB98F400C1B45B /* LICENSE */,
 				9F834BE027AB98F400C1B45B /* README.md */,
 				9F3A54252750413E00781A91 /* BayclockApp.swift */,
@@ -233,6 +276,17 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		9FF134FF28E8BDFD00885E2F /* BayclockWidget */ = {
+			isa = PBXGroup;
+			children = (
+				9FF1350028E8BDFD00885E2F /* BayclockWidget.swift */,
+				9FF1350228E8BDFE00885E2F /* Assets.xcassets */,
+				9FF1350428E8BDFE00885E2F /* Info.plist */,
+				9FF1350E28E9324300885E2F /* Arc.swift */,
+			);
+			path = BayclockWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -243,11 +297,13 @@
 				9F3A541E2750413E00781A91 /* Sources */,
 				9F3A541F2750413E00781A91 /* Frameworks */,
 				9F3A54202750413E00781A91 /* Resources */,
-				9F2CFB7128065DC400916D9A /* Embed App Extensions */,
+				9F2CFB7128065DC400916D9A /* Embed Foundation Extensions */,
+				9FDAB7C828E8B84B004CDD28 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9FF1350628E8BDFE00885E2F /* PBXTargetDependency */,
 			);
 			name = Bayclock;
 			productName = Bayclock;
@@ -290,6 +346,23 @@
 			productReference = 9F3A543C2750414000781A91 /* BayclockUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		9FF134FB28E8BDFD00885E2F /* BayclockWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FF1350A28E8BDFE00885E2F /* Build configuration list for PBXNativeTarget "BayclockWidgetExtension" */;
+			buildPhases = (
+				9FF134F828E8BDFD00885E2F /* Sources */,
+				9FF134F928E8BDFD00885E2F /* Frameworks */,
+				9FF134FA28E8BDFD00885E2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BayclockWidgetExtension;
+			productName = BayclockWidgetExtension;
+			productReference = 9FF134FC28E8BDFD00885E2F /* BayclockWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -297,8 +370,8 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1310;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					9F3A54212750413E00781A91 = {
 						CreatedOnToolsVersion = 13.1;
@@ -310,6 +383,9 @@
 					9F3A543B2750414000781A91 = {
 						CreatedOnToolsVersion = 13.1;
 						TestTargetID = 9F3A54212750413E00781A91;
+					};
+					9FF134FB28E8BDFD00885E2F = {
+						CreatedOnToolsVersion = 14.0.1;
 					};
 				};
 			};
@@ -329,6 +405,7 @@
 				9F3A54212750413E00781A91 /* Bayclock */,
 				9F3A54312750414000781A91 /* BayclockTests */,
 				9F3A543B2750414000781A91 /* BayclockUITests */,
+				9FF134FB28E8BDFD00885E2F /* BayclockWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -360,6 +437,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FF134FA28E8BDFD00885E2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FF1350328E8BDFE00885E2F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +490,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9FF134F828E8BDFD00885E2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FF1350128E8BDFD00885E2F /* BayclockWidget.swift in Sources */,
+				9FF1350B28E8C4DA00885E2F /* GetTime.swift in Sources */,
+				9FF1350F28E9324300885E2F /* Arc.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -417,6 +512,11 @@
 			isa = PBXTargetDependency;
 			target = 9F3A54212750413E00781A91 /* Bayclock */;
 			targetProxy = 9F3A543D2750414000781A91 /* PBXContainerItemProxy */;
+		};
+		9FF1350628E8BDFE00885E2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FF134FB28E8BDFD00885E2F /* BayclockWidgetExtension */;
+			targetProxy = 9FF1350528E8BDFE00885E2F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -540,8 +640,10 @@
 		9F3A54472750414000781A91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Bayclock/Bayclock.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bayclock/Preview Content\"";
@@ -570,8 +672,10 @@
 		9F3A54482750414000781A91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Bayclock/Bayclock.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bayclock/Preview Content\"";
@@ -693,6 +797,64 @@
 			};
 			name = Release;
 		};
+		9FF1350828E8BDFE00885E2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2X8J47ZU79;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BayclockWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BayclockWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = seankuwamoto.bayclock.BayclockWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9FF1350928E8BDFE00885E2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2X8J47ZU79;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BayclockWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BayclockWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = seankuwamoto.bayclock.BayclockWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -728,6 +890,15 @@
 			buildConfigurations = (
 				9F3A544D2750414000781A91 /* Debug */,
 				9F3A544E2750414000781A91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FF1350A28E8BDFE00885E2F /* Build configuration list for PBXNativeTarget "BayclockWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FF1350828E8BDFE00885E2F /* Debug */,
+				9FF1350928E8BDFE00885E2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

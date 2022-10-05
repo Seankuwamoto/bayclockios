@@ -22,7 +22,7 @@ struct TestBar: View {
                 .foregroundColor(.white)
             RoundedRectangle(cornerRadius: 20)
                 .frame(width: rectLength - 50, height: barWidth)
-                .foregroundColor(getColor(name: "Test"))
+                .foregroundColor(getColor(name: "B"))
                 .opacity(0.3)
 //            ZStack {
 //                RoundedRectangle(cornerRadius: 20)

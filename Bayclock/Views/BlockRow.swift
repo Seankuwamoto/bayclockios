@@ -81,7 +81,7 @@ struct BlockRow: View {
                     .saturation(1.2)
                     .padding(.leading, barWidth / 2)
                     .padding(.trailing, barWidth / 2)
-                    .shadow(color: .black, radius: 1, x: 1, y: 1)
+                    .shadow(color: .gray, radius: 1, x: 1, y: 1)
             )
             .onAppear {
                 // Sets block sizes depending on wether compressed mode is on or not

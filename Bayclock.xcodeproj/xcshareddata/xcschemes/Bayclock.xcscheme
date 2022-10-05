@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1310"
+   LastUpgradeVersion = "1400"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -63,6 +63,17 @@
                BlueprintIdentifier = "9F3A54312750414000781A91"
                BuildableName = "BayclockTests.xctest"
                BlueprintName = "BayclockTests"
+               ReferencedContainer = "container:Bayclock.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9FDAB7B628E8B84B004CDD28"
+               BuildableName = "shared_codeTests.xctest"
+               BlueprintName = "shared_codeTests"
                ReferencedContainer = "container:Bayclock.xcodeproj">
             </BuildableReference>
          </TestableReference>
